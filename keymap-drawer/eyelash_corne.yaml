@@ -197,7 +197,7 @@ layers:
   - {t: SYM, type: held alternate}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   GAME:
-  - $$mdi:keyboard-tab$$
+  - $$mdi:keyboard-esc$$
   - Q
   - W
   - E
@@ -223,7 +223,7 @@ layers:
   - {t: '8', s: '*'}
   - {t: '9', s: (}
   - {t: '0', s: )}
-  - {t: ;, s: ':'}
+  - $$mdi:keyboard-tab$$
   - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-control$$
   - Z
