@@ -20,6 +20,7 @@ Static checks validate mapping and isolation, not timing. After approved flashin
 - EXT: hold its thumb and use right-hand Cmd/Shift/Alt/Ctrl with left-hand arrows. NUM: use left-hand Ctrl/Alt/Cmd/Shift with right-hand digits. Verify press/release events and multi-modifier chords.
 - GAME simultaneous W+E, I+O, X+C and comma+period never emit combos. Hold W/A/S/D, repeat Q/E/R/F and digits, and combine dedicated Shift/Ctrl/Alt. No stuck keys on release.
 - Enter GAME via EXT + bottom outer right, release both, and exit with bottom outer right. Repeat while other keys were held and verify all release events. Release keys before switching during normal use.
+- Joystick: test all four pointer directions and stopping on release, including any supported diagonal combinations. Centre left-clicks on BASE/NUM/GAME; EXT centre right-clicks; SYM centre middle-clicks. Verify held clicks release and drag works if the physical switch permits centre+direction simultaneously. Repeat mouse checks over USB and already-paired Bluetooth. Pointing was already enabled; this change does not intentionally alter its HID descriptor.
 - USB, previously paired Bluetooth, both halves/displays, encoder, sleep/wake. Do not remove pairing to make this test pass.
 
 ## Approval and flashing

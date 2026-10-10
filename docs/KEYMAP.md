@@ -12,6 +12,8 @@ EXT places Left/Down/Up/Right directly on A/S/D/F. Hold the left middle thumb to
 
 EXT: J/K/L/semicolon are Shift/Cmd/Alt/Ctrl, opposite the left-hand arrows. NUM: A/S/D/F are Ctrl/Alt/Cmd/Shift, opposite the right-hand numpad. These are plain held modifiers, with no hold-tap timing. USB output selection is NUM+G; Bluetooth output selection is NUM+quote. NUM+H is plus.
 
+Joystick: hold a direction to move the mouse on every layer. Press its centre for left click; hold EXT for right click or SYM for middle click. Hold the centre while moving for drag. This is a digital five-way switch, not an analog stick. Existing mouse speed (maximum 1200) and pointing configuration are retained.
+
 | Position | BASE | EXT | SYM | NUM | GAME | GAME NUM |
 |---|---|---|---|---|---|---|
 | 0 | TAB | TAB | TAB | TAB | ESC | ESC |
@@ -20,7 +22,7 @@ EXT: J/K/L/semicolon are Shift/Cmd/Alt/Ctrl, opposite the left-hand arrows. NUM:
 | 3 | E | F3 | HASH | N3 | E | N3 |
 | 4 | R | F4 | DLLR | N4 | R | N4 |
 | 5 | T | F5 | PRCNT | N5 | T | N5 |
-| 6 | UP | UP | UP | UP | UP | UP |
+| 6 | mmv MOVE_UP | mmv MOVE_UP | mmv MOVE_UP | mmv MOVE_UP | mmv MOVE_UP | mmv MOVE_UP |
 | 7 | Y | F6 | CARET | FSLH | N1 | N1 |
 | 8 | U | F7 | AMPS | N7 | N2 | N2 |
 | 9 | I | F8 | ASTRK | N8 | N3 | N3 |
@@ -33,9 +35,9 @@ EXT: J/K/L/semicolon are Shift/Cmd/Alt/Ctrl, opposite the left-hand arrows. NUM:
 | 16 | D | UP | LBKT | LGUI | D | N8 |
 | 17 | F | RIGHT | RBKT | LSHFT | F | N9 |
 | 18 | G | DEL | BSLH | out OUT_USB | G | N0 |
-| 19 | LEFT | LEFT | LEFT | LEFT | LEFT | LEFT |
-| 20 | ENTER | ENTER | ENTER | ENTER | ENTER | ENTER |
-| 21 | RIGHT | RIGHT | RIGHT | RIGHT | RIGHT | RIGHT |
+| 19 | mmv MOVE_LEFT | mmv MOVE_LEFT | mmv MOVE_LEFT | mmv MOVE_LEFT | mmv MOVE_LEFT | mmv MOVE_LEFT |
+| 20 | mkp LCLK | mkp RCLK | mkp MCLK | mkp LCLK | mkp LCLK | mkp LCLK |
+| 21 | mmv MOVE_RIGHT | mmv MOVE_RIGHT | mmv MOVE_RIGHT | mmv MOVE_RIGHT | mmv MOVE_RIGHT | mmv MOVE_RIGHT |
 | 22 | H | LEFT | MINUS | PLUS | N7 | N7 |
 | 23 | J | LSHFT | EQUAL | N4 | N8 | N8 |
 | 24 | K | LGUI | LBRC | N5 | N9 | N9 |
@@ -49,7 +51,7 @@ EXT: J/K/L/semicolon are Shift/Cmd/Alt/Ctrl, opposite the left-hand arrows. NUM:
 | 32 | V | V | RPAR | bt BT_SEL 2 | V | V |
 | 33 | B | B | UNDER | bt BT_SEL 3 | B | B |
 | 34 | SPACE | SPACE | SPACE | studio_unlock | SPACE | SPACE |
-| 35 | DOWN | DOWN | DOWN | DOWN | DOWN | DOWN |
+| 35 | mmv MOVE_DOWN | mmv MOVE_DOWN | mmv MOVE_DOWN | mmv MOVE_DOWN | mmv MOVE_DOWN | mmv MOVE_DOWN |
 | 36 | N | HOME | PLUS | N0 | N | N |
 | 37 | M | END | EQUAL | N1 | M | M |
 | 38 | COMMA | PG_DN | COMMA | N2 | COMMA | COMMA |

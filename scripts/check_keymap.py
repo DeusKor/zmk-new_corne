@@ -13,7 +13,7 @@ assert all(len(bs) == 48 for bs in bindings.values())
 assert all(bs[45] == '&kp BSPC' for bs in bindings.values())
 game = bindings['game']
 for layer in ('game', 'game_num'):
-    assert all(b.startswith('&kp ') or b in ('&to BASE', '&mo GAME_NUM') for b in bindings[layer])
+    assert all(b.startswith('&kp ') or b in ('&to BASE', '&mo GAME_NUM') for i, b in enumerate(bindings[layer]) if i not in (6,19,20,21,35))
     assert bindings[layer][41] == '&to BASE'
     assert bindings[layer][43] == '&mo GAME_NUM'
 assert [bindings['game_num'][i] for i in [1,2,3,4,5,14,15,16,17,18]] == ['&kp N'+str(i) for i in [1,2,3,4,5,6,7,8,9,0]]
@@ -49,3 +49,15 @@ assert [bindings['ext'][i] for i in [23,24,25,26]] == ['&kp '+k for k in ['LSHFT
 assert [bindings['num'][i] for i in [14,15,16,17]] == ['&kp '+k for k in ['LCTRL','LALT','LGUI','LSHFT']]
 assert '&out OUT_USB' in bindings['num'] and '&out OUT_BLE' in bindings['num']
 print('PASS: opposite-hand modifier rows and output selection')
+
+# Joystick identity comes from the editor's physical layout, not letter positions.
+import json
+physical = json.loads((p / 'config/eyelash_corne.json').read_text())['layouts']['default_layout']['layout']
+for pos, direction in {6:'up',19:'left',21:'right',35:'down'}.items():
+    assert physical[pos]['label'] == '5-way '+direction
+    assert all(bs[pos] == '&mmv MOVE_'+direction.upper() for bs in bindings.values())
+assert physical[20]['label'] == '5-way press'
+for layer, bs in bindings.items():
+    assert bs[20] == '&mkp '+{'ext':'RCLK','sym':'MCLK'}.get(layer,'LCLK')
+assert 'CONFIG_ZMK_POINTING=y' in (p / 'config/eyelash_corne.conf').read_text()
+print('PASS: joystick directions, layer clicks and existing mouse support')

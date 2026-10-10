@@ -72,9 +72,9 @@
         base_layer {
             display-name = "BASE";
             bindings = <
-                &kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp UP  &kp Y  &kp U  &kp I  &kp O  &kp P  &mo NUM
-                &kp LSHFT  &kp A  &kp S  &kp D  &kp F  &kp G  &kp LEFT  &kp ENTER  &kp RIGHT  &kp H  &kp J  &kp K  &kp L  &kp SEMI  &kp SQT
-                &kp LCTRL  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp SPACE  &kp DOWN  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+                &kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &mmv MOVE_UP  &kp Y  &kp U  &kp I  &kp O  &kp P  &mo NUM
+                &kp LSHFT  &kp A  &kp S  &kp D  &kp F  &kp G  &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &kp H  &kp J  &kp K  &kp L  &kp SEMI  &kp SQT
+                &kp LCTRL  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp SPACE  &mmv MOVE_DOWN  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
                 &kp LGUI  &mo EXT  &kp SPACE  &kp BSPC  &mo SYM  &kp ENTER
             >;
             sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -82,9 +82,9 @@
         ext_layer {
             display-name = "EXT";
             bindings = <
-                &kp TAB  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp UP  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &mo NUM
-                &kp LSHFT  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp DEL  &kp LEFT  &kp ENTER  &kp RIGHT  &kp LEFT  &kp LSHFT  &kp LGUI  &kp LALT  &kp LCTRL  &kp INS
-                &kp LCTRL  &kp F11  &kp F12  &kp C  &kp V  &kp B  &kp SPACE  &kp DOWN  &kp HOME  &kp END  &kp PG_DN  &kp PG_UP  &kp RALT  &to GAME
+                &kp TAB  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &mmv MOVE_UP  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &mo NUM
+                &kp LSHFT  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp DEL  &mmv MOVE_LEFT  &mkp RCLK  &mmv MOVE_RIGHT  &kp LEFT  &kp LSHFT  &kp LGUI  &kp LALT  &kp LCTRL  &kp INS
+                &kp LCTRL  &kp F11  &kp F12  &kp C  &kp V  &kp B  &kp SPACE  &mmv MOVE_DOWN  &kp HOME  &kp END  &kp PG_DN  &kp PG_UP  &kp RALT  &to GAME
                 &kp LGUI  &trans  &kp SPACE  &kp BSPC  &mo SYM  &kp ENTER
             >;
             sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -92,9 +92,9 @@
         sym_layer {
             display-name = "SYM";
             bindings = <
-                &kp TAB  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &kp UP  &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR  &mo NUM
-                &kp LSHFT  &kp GRAVE  &kp TILDE  &kp LBKT  &kp RBKT  &kp BSLH  &kp LEFT  &kp ENTER  &kp RIGHT  &kp MINUS  &kp EQUAL  &kp LBRC  &kp RBRC  &kp PIPE  &kp DQT
-                &kp LCTRL  &kp LT  &kp GT  &kp LPAR  &kp RPAR  &kp UNDER  &kp SPACE  &kp DOWN  &kp PLUS  &kp EQUAL  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+                &kp TAB  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &mmv MOVE_UP  &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR  &mo NUM
+                &kp LSHFT  &kp GRAVE  &kp TILDE  &kp LBKT  &kp RBKT  &kp BSLH  &mmv MOVE_LEFT  &mkp MCLK  &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp LBRC  &kp RBRC  &kp PIPE  &kp DQT
+                &kp LCTRL  &kp LT  &kp GT  &kp LPAR  &kp RPAR  &kp UNDER  &kp SPACE  &mmv MOVE_DOWN  &kp PLUS  &kp EQUAL  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
                 &kp LGUI  &mo EXT  &kp SPACE  &kp BSPC  &trans  &kp ENTER
             >;
             sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -102,9 +102,9 @@
         num_layer {
             display-name = "NUM";
             bindings = <
-                &kp TAB  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp UP  &kp FSLH  &kp N7  &kp N8  &kp N9  &kp ASTRK  &trans
-                &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &kp LSHFT  &out OUT_USB  &kp LEFT  &kp ENTER  &kp RIGHT  &kp PLUS  &kp N4  &kp N5  &kp N6  &kp MINUS  &out OUT_BLE
-                &kp LCTRL  &kp LALT  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &studio_unlock  &kp DOWN  &kp N0  &kp N1  &kp N2  &kp N3  &kp DOT  &soft_off
+                &kp TAB  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &mmv MOVE_UP  &kp FSLH  &kp N7  &kp N8  &kp N9  &kp ASTRK  &trans
+                &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &kp LSHFT  &out OUT_USB  &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &kp PLUS  &kp N4  &kp N5  &kp N6  &kp MINUS  &out OUT_BLE
+                &kp LCTRL  &kp LALT  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &studio_unlock  &mmv MOVE_DOWN  &kp N0  &kp N1  &kp N2  &kp N3  &kp DOT  &soft_off
                 &kp LGUI  &mo EXT  &kp SPACE  &kp BSPC  &mo SYM  &kp ENTER
             >;
             sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -112,9 +112,9 @@
         game_layer {
             display-name = "GAME";
             bindings = <
-                &kp ESC  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp UP  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6
-                &kp LSHFT  &kp A  &kp S  &kp D  &kp F  &kp G  &kp LEFT  &kp ENTER  &kp RIGHT  &kp N7  &kp N8  &kp N9  &kp N0  &kp TAB  &kp SQT
-                &kp LCTRL  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp SPACE  &kp DOWN  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &to BASE
+                &kp ESC  &kp Q  &kp W  &kp E  &kp R  &kp T  &mmv MOVE_UP  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6
+                &kp LSHFT  &kp A  &kp S  &kp D  &kp F  &kp G  &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &kp N7  &kp N8  &kp N9  &kp N0  &kp TAB  &kp SQT
+                &kp LCTRL  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp SPACE  &mmv MOVE_DOWN  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &to BASE
                 &kp LALT  &mo GAME_NUM  &kp SPACE  &kp BSPC  &kp RSHFT  &kp ENTER
             >;
             sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -122,9 +122,9 @@
         game_num_layer {
             display-name = "GAME NUM";
             bindings = <
-                &kp ESC  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp UP  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6
-                &kp LSHFT  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp LEFT  &kp ENTER  &kp RIGHT  &kp N7  &kp N8  &kp N9  &kp N0  &kp TAB  &kp SQT
-                &kp LCTRL  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp SPACE  &kp DOWN  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &to BASE
+                &kp ESC  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &mmv MOVE_UP  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6
+                &kp LSHFT  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &kp N7  &kp N8  &kp N9  &kp N0  &kp TAB  &kp SQT
+                &kp LCTRL  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp SPACE  &mmv MOVE_DOWN  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &to BASE
                 &kp LALT  &mo GAME_NUM  &kp SPACE  &kp BSPC  &kp RSHFT  &kp ENTER
             >;
             sensor-bindings = <&rsr_vol &rsr_trans>;
