@@ -16,7 +16,7 @@ Static checks validate mapping and isolation, not timing. After approved flashin
 
 - Every physical key and all six thumbs; inner right Backspace repeats normally.
 - Each BASE chord emits one intended key; ordinary fast WE/IO/XC/comma-period rolls remain ordinary typing. Test both release orders, and tune timing only from observed results.
-- EXT navigation and F1–F12, SYM punctuation with the host's US layout, NUM digits and profile selection.
+- EXT A/S/D/F = Left/Down/Up/Right and F1–F12; SYM punctuation with the host's US layout; NUM U/I/O = 7/8/9, J/K/L = 4/5/6, M/comma/period = 1/2/3, N = 0 and slash = decimal, plus profile selection.
 - GAME simultaneous W+E, I+O, X+C and comma+period never emit combos. Hold W/A/S/D, repeat Q/E/R/F and digits, and combine dedicated Shift/Ctrl/Alt. No stuck keys on release.
 - Enter GAME via EXT + bottom outer right, release both, and exit with bottom outer right. Repeat while other keys were held and verify all release events. Release keys before switching during normal use.
 - USB, previously paired Bluetooth, both halves/displays, encoder, sleep/wake. Do not remove pairing to make this test pass.

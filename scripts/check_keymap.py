@@ -34,3 +34,13 @@ assert not expected
 assert 'BT_CLR' not in s and 'settings_reset' not in s
 assert '&soft_off' not in ' '.join(game)
 print('PASS: positions, layer sizes, combos, gaming bindings, exit, modifiers and pairing guards')
+
+# Left-hand navigation and right-shifted numpad follow physical letter positions.
+assert [bindings['base'][i] for i in [14,15,16,17]] == ['&kp '+k for k in ['A','S','D','F']]
+assert [bindings['ext'][i] for i in [14,15,16,17]] == ['&kp '+k for k in ['LEFT','DOWN','UP','RIGHT']]
+for positions, letters, digits in [([8,9,10], ['U','I','O'], [7,8,9]), ([23,24,25], ['J','K','L'], [4,5,6]), ([37,38,39], ['M','COMMA','DOT'], [1,2,3])]:
+    assert [bindings['base'][i] for i in positions] == ['&kp '+k for k in letters]
+    assert [bindings['num'][i] for i in positions] == ['&kp N'+str(k) for k in digits]
+assert bindings['num'][36] == '&kp N0'
+assert bindings['num'][40] == '&kp DOT'
+print('PASS: ASDF arrows and shifted UIO/JKL/M-comma-period numpad')
