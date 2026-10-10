@@ -10,7 +10,7 @@ NUM is held at position 12 (top outer right). USB/BLE selection, Bluetooth profi
 
 | Position | BASE | EXT | SYM | NUM | GAME |
 |---|---|---|---|---|---|
-| 0 | TAB | TAB | TAB | TAB | TAB |
+| 0 | TAB | TAB | TAB | TAB | ESC |
 | 1 | Q | F1 | EXCL | N1 | Q |
 | 2 | W | F2 | AT | N2 | W |
 | 3 | E | F3 | HASH | N3 | E |
@@ -36,7 +36,7 @@ NUM is held at position 12 (top outer right). USB/BLE selection, Bluetooth profi
 | 23 | J | DOWN | EQUAL | N5 | N8 |
 | 24 | K | UP | LBRC | N6 | N9 |
 | 25 | L | RIGHT | RBRC | PLUS | N0 |
-| 26 | SEMI | DEL | PIPE | MINUS | SEMI |
+| 26 | SEMI | DEL | PIPE | MINUS | TAB |
 | 27 | SQT | INS | DQT | SQT | SQT |
 | 28 | LCTRL | LCTRL | LCTRL | out OUT_USB | LCTRL |
 | 29 | Z | F11 | LT | out OUT_BLE | Z |
