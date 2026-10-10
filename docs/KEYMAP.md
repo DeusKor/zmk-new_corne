@@ -10,6 +10,8 @@ NUM is held at position 12 (top outer right). USB/BLE selection, Bluetooth profi
 
 EXT places Left/Down/Up/Right directly on A/S/D/F. Hold the left middle thumb to navigate. NUM has a right-hand numpad one column farther right: U/I/O = 7/8/9, J/K/L = 4/5/6, M/comma/period = 1/2/3; N = 0, slash = decimal. Enter and Backspace stay on their thumbs. Use NUM alone for numbers, EXT alone for navigation.
 
+EXT: J/K/L/semicolon are Shift/Cmd/Alt/Ctrl, opposite the left-hand arrows. NUM: A/S/D/F are Ctrl/Alt/Cmd/Shift, opposite the right-hand numpad. These are plain held modifiers, with no hold-tap timing. USB output selection is NUM+G; Bluetooth output selection is NUM+quote. NUM+H is plus.
+
 | Position | BASE | EXT | SYM | NUM | GAME | GAME NUM |
 |---|---|---|---|---|---|---|
 | 0 | TAB | TAB | TAB | TAB | ESC | ESC |
@@ -26,20 +28,20 @@ EXT places Left/Down/Up/Right directly on A/S/D/F. Hold the left middle thumb to
 | 11 | P | F10 | RPAR | ASTRK | N5 | N5 |
 | 12 | mo NUM | mo NUM | mo NUM | trans | N6 | N6 |
 | 13 | LSHFT | LSHFT | LSHFT | LSHFT | LSHFT | LSHFT |
-| 14 | A | LEFT | GRAVE | out OUT_USB | A | N6 |
-| 15 | S | DOWN | TILDE | out OUT_BLE | S | N7 |
-| 16 | D | UP | LBKT | F8 | D | N8 |
-| 17 | F | RIGHT | RBKT | F9 | F | N9 |
-| 18 | G | DEL | BSLH | F10 | G | N0 |
+| 14 | A | LEFT | GRAVE | LCTRL | A | N6 |
+| 15 | S | DOWN | TILDE | LALT | S | N7 |
+| 16 | D | UP | LBKT | LGUI | D | N8 |
+| 17 | F | RIGHT | RBKT | LSHFT | F | N9 |
+| 18 | G | DEL | BSLH | out OUT_USB | G | N0 |
 | 19 | LEFT | LEFT | LEFT | LEFT | LEFT | LEFT |
 | 20 | ENTER | ENTER | ENTER | ENTER | ENTER | ENTER |
 | 21 | RIGHT | RIGHT | RIGHT | RIGHT | RIGHT | RIGHT |
-| 22 | H | LEFT | MINUS | SQT | N7 | N7 |
-| 23 | J | DOWN | EQUAL | N4 | N8 | N8 |
-| 24 | K | UP | LBRC | N5 | N9 | N9 |
-| 25 | L | RIGHT | RBRC | N6 | N0 | N0 |
-| 26 | SEMI | DEL | PIPE | MINUS | TAB | TAB |
-| 27 | SQT | INS | DQT | PLUS | SQT | SQT |
+| 22 | H | LEFT | MINUS | PLUS | N7 | N7 |
+| 23 | J | LSHFT | EQUAL | N4 | N8 | N8 |
+| 24 | K | LGUI | LBRC | N5 | N9 | N9 |
+| 25 | L | LALT | RBRC | N6 | N0 | N0 |
+| 26 | SEMI | LCTRL | PIPE | MINUS | TAB | TAB |
+| 27 | SQT | INS | DQT | out OUT_BLE | SQT | SQT |
 | 28 | LCTRL | LCTRL | LCTRL | LCTRL | LCTRL | LCTRL |
 | 29 | Z | F11 | LT | LALT | Z | Z |
 | 30 | X | F12 | GT | bt BT_SEL 0 | X | X |
