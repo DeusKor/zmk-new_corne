@@ -19,6 +19,7 @@
 #define SYM 2
 #define NUM 3
 #define GAME 4
+#define GAME_NUM 5
 
 / {
     behaviors {
@@ -114,7 +115,17 @@
                 &kp ESC  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp UP  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6
                 &kp LSHFT  &kp A  &kp S  &kp D  &kp F  &kp G  &kp LEFT  &kp ENTER  &kp RIGHT  &kp N7  &kp N8  &kp N9  &kp N0  &kp TAB  &kp SQT
                 &kp LCTRL  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp SPACE  &kp DOWN  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &to BASE
-                &kp LALT  &kp LCTRL  &kp SPACE  &kp BSPC  &kp RSHFT  &kp ENTER
+                &kp LALT  &mo GAME_NUM  &kp SPACE  &kp BSPC  &kp RSHFT  &kp ENTER
+            >;
+            sensor-bindings = <&rsr_vol &rsr_trans>;
+        };
+        game_num_layer {
+            display-name = "GAME NUM";
+            bindings = <
+                &kp ESC  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp UP  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6
+                &kp LSHFT  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp LEFT  &kp ENTER  &kp RIGHT  &kp N7  &kp N8  &kp N9  &kp N0  &kp TAB  &kp SQT
+                &kp LCTRL  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp SPACE  &kp DOWN  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &to BASE
+                &kp LALT  &mo GAME_NUM  &kp SPACE  &kp BSPC  &kp RSHFT  &kp ENTER
             >;
             sensor-bindings = <&rsr_vol &rsr_trans>;
         };

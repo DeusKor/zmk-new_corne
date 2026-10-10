@@ -2,7 +2,7 @@
 
 US host layout. Three thumbs per half; position 45 is the inner right thumb in the supplied physical layout. Hardware identity still needs physical confirmation.
 
-Hold EXT (left middle thumb) and tap position 41 (bottom outer right) to enter GAME. Tap position 41 alone to exit GAME. Release held keys before switching modes. GAME has dedicated left Shift, Ctrl and Alt; digits 1–6 are on the right top row and 7–0 on its home row. No timed key behaviors are used.
+Hold EXT (left middle thumb) and tap position 41 (bottom outer right) to enter GAME. Tap position 41 alone to exit GAME. Release held keys before switching modes. GAME has dedicated left Shift, Ctrl and Alt; digits 1–6 are on the right top row and 7–0 on its home row. Hold the left middle thumb for GAME NUM: left Q–T become 1–5 and A–G become 6–0, so numbers are available without leaving the mouse. Left Ctrl remains at position 28. No timed key behaviors are used.
 
 BASE combos: W+E Escape; I+O Backspace; X+C Tab; comma+period Enter. Press within 40 ms after 150 ms without typing. Combos are disabled on other layers. This idle guard reduces accidental typing rolls; pause before an intentional chord.
 
@@ -53,7 +53,7 @@ NUM is held at position 12 (top outer right). USB/BLE selection, Bluetooth profi
 | 40 | FSLH | RALT | FSLH | DOT | FSLH |
 | 41 | ESC | to GAME | ESC | soft_off | to BASE |
 | 42 | LGUI | LGUI | LGUI | LGUI | LALT |
-| 43 | mo EXT | trans | mo EXT | mo EXT | LCTRL |
+| 43 | mo EXT | trans | mo EXT | mo EXT | mo GAME_NUM |
 | 44 | SPACE | SPACE | SPACE | SPACE | SPACE |
 | 45 | BSPC | BSPC | BSPC | BSPC | BSPC |
 | 46 | mo SYM | mo SYM | trans | mo SYM | RSHFT |
@@ -62,3 +62,5 @@ NUM is held at position 12 (top outer right). USB/BLE selection, Bluetooth profi
 Thumb positions: left outer→inner 42,43,44; right inner→outer 45,46,47. Other positions follow `config/eyelash_corne.json`, including the five-way control and encoder press.
 
 The unavailable 34-key reference is inspiration only: this adaptation retains all 48 hardware positions and QWERTY. EXT supplies navigation and F1–F12; SYM supplies coding symbols; NUM supplies numbers and device controls.
+
+GAME NUM otherwise duplicates GAME, including plain modifiers and the exit key. Releasing the thumb returns immediately to GAME.

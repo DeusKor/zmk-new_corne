@@ -6,13 +6,17 @@ s = (p / 'config/eyelash_corne.keymap').read_text()
 layers = dict(re.findall(r'(\w+)_layer\s*\{.*?bindings\s*=\s*<(.*?)>;', s, re.S))
 bindings = {n: re.findall(r'&\w+(?:\s+[^&]+)?', b) for n, b in layers.items()}
 bindings = {n: [' '.join(b.split()) for b in bs] for n, bs in bindings.items()}
-assert list(bindings) == ['base', 'ext', 'sym', 'num', 'game']
+assert list(bindings) == ['base', 'ext', 'sym', 'num', 'game', 'game_num']
 transform = (p / 'boards/shields/eyelash_corne/eyelash_corne.dtsi').read_text().split('map = <')[1].split('>;')[0]
 assert len(re.findall(r'RC\(', transform)) == 48
 assert all(len(bs) == 48 for bs in bindings.values())
 assert all(bs[45] == '&kp BSPC' for bs in bindings.values())
 game = bindings['game']
-assert all(b.startswith('&kp ') or b == '&to BASE' for b in game)
+for layer in ('game', 'game_num'):
+    assert all(b.startswith('&kp ') or b in ('&to BASE', '&mo GAME_NUM') for b in bindings[layer])
+    assert bindings[layer][41] == '&to BASE'
+    assert bindings[layer][43] == '&mo GAME_NUM'
+assert [bindings['game_num'][i] for i in [1,2,3,4,5,14,15,16,17,18]] == ['&kp N'+str(i) for i in [1,2,3,4,5,6,7,8,9,0]]
 for i, key in {1:'Q',2:'W',3:'E',4:'R',14:'A',15:'S',16:'D',17:'F'}.items():
     assert game[i] == '&kp ' + key
 assert all('&kp N' + str(i) in game for i in range(10))
