@@ -122,9 +122,9 @@
         game_num_layer {
             display-name = "GAME NUM";
             bindings = <
-                &kp ESC  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp UP  &kp FSLH  &kp N7  &kp N8  &kp N9  &kp ASTRK  &kp N6
-                &kp LSHFT  &out OUT_USB  &out OUT_BLE  &kp N8  &kp N9  &kp N0  &kp LEFT  &kp ENTER  &kp RIGHT  &kp SQT  &kp N4  &kp N5  &kp N6  &kp MINUS  &kp PLUS
-                &kp LCTRL  &kp LALT  &kp X  &kp C  &kp V  &kp B  &kp SPACE  &kp DOWN  &kp N0  &kp N1  &kp N2  &kp N3  &kp DOT  &to BASE
+                &kp ESC  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp UP  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6
+                &kp LSHFT  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp LEFT  &kp ENTER  &kp RIGHT  &kp N7  &kp N8  &kp N9  &kp N0  &kp TAB  &kp SQT
+                &kp LCTRL  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp SPACE  &kp DOWN  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &to BASE
                 &kp LALT  &mo GAME_NUM  &kp SPACE  &kp BSPC  &kp RSHFT  &kp ENTER
             >;
             sensor-bindings = <&rsr_vol &rsr_trans>;

@@ -19,40 +19,40 @@ EXT places Left/Down/Up/Right directly on A/S/D/F. Hold the left middle thumb to
 | 4 | R | F4 | DLLR | N4 | R | N4 |
 | 5 | T | F5 | PRCNT | N5 | T | N5 |
 | 6 | UP | UP | UP | UP | UP | UP |
-| 7 | Y | F6 | CARET | FSLH | N1 | FSLH |
-| 8 | U | F7 | AMPS | N7 | N2 | N7 |
-| 9 | I | F8 | ASTRK | N8 | N3 | N8 |
-| 10 | O | F9 | LPAR | N9 | N4 | N9 |
-| 11 | P | F10 | RPAR | ASTRK | N5 | ASTRK |
+| 7 | Y | F6 | CARET | FSLH | N1 | N1 |
+| 8 | U | F7 | AMPS | N7 | N2 | N2 |
+| 9 | I | F8 | ASTRK | N8 | N3 | N3 |
+| 10 | O | F9 | LPAR | N9 | N4 | N4 |
+| 11 | P | F10 | RPAR | ASTRK | N5 | N5 |
 | 12 | mo NUM | mo NUM | mo NUM | trans | N6 | N6 |
 | 13 | LSHFT | LSHFT | LSHFT | LSHFT | LSHFT | LSHFT |
-| 14 | A | LEFT | GRAVE | out OUT_USB | A | out OUT_USB |
-| 15 | S | DOWN | TILDE | out OUT_BLE | S | out OUT_BLE |
+| 14 | A | LEFT | GRAVE | out OUT_USB | A | N6 |
+| 15 | S | DOWN | TILDE | out OUT_BLE | S | N7 |
 | 16 | D | UP | LBKT | F8 | D | N8 |
 | 17 | F | RIGHT | RBKT | F9 | F | N9 |
 | 18 | G | DEL | BSLH | F10 | G | N0 |
 | 19 | LEFT | LEFT | LEFT | LEFT | LEFT | LEFT |
 | 20 | ENTER | ENTER | ENTER | ENTER | ENTER | ENTER |
 | 21 | RIGHT | RIGHT | RIGHT | RIGHT | RIGHT | RIGHT |
-| 22 | H | LEFT | MINUS | SQT | N7 | SQT |
-| 23 | J | DOWN | EQUAL | N4 | N8 | N4 |
-| 24 | K | UP | LBRC | N5 | N9 | N5 |
-| 25 | L | RIGHT | RBRC | N6 | N0 | N6 |
-| 26 | SEMI | DEL | PIPE | MINUS | TAB | MINUS |
-| 27 | SQT | INS | DQT | PLUS | SQT | PLUS |
+| 22 | H | LEFT | MINUS | SQT | N7 | N7 |
+| 23 | J | DOWN | EQUAL | N4 | N8 | N8 |
+| 24 | K | UP | LBRC | N5 | N9 | N9 |
+| 25 | L | RIGHT | RBRC | N6 | N0 | N0 |
+| 26 | SEMI | DEL | PIPE | MINUS | TAB | TAB |
+| 27 | SQT | INS | DQT | PLUS | SQT | SQT |
 | 28 | LCTRL | LCTRL | LCTRL | LCTRL | LCTRL | LCTRL |
-| 29 | Z | F11 | LT | LALT | Z | LALT |
+| 29 | Z | F11 | LT | LALT | Z | Z |
 | 30 | X | F12 | GT | bt BT_SEL 0 | X | X |
 | 31 | C | C | LPAR | bt BT_SEL 1 | C | C |
 | 32 | V | V | RPAR | bt BT_SEL 2 | V | V |
 | 33 | B | B | UNDER | bt BT_SEL 3 | B | B |
 | 34 | SPACE | SPACE | SPACE | studio_unlock | SPACE | SPACE |
 | 35 | DOWN | DOWN | DOWN | DOWN | DOWN | DOWN |
-| 36 | N | HOME | PLUS | N0 | N | N0 |
-| 37 | M | END | EQUAL | N1 | M | N1 |
-| 38 | COMMA | PG_DN | COMMA | N2 | COMMA | N2 |
-| 39 | DOT | PG_UP | DOT | N3 | DOT | N3 |
-| 40 | FSLH | RALT | FSLH | DOT | FSLH | DOT |
+| 36 | N | HOME | PLUS | N0 | N | N |
+| 37 | M | END | EQUAL | N1 | M | M |
+| 38 | COMMA | PG_DN | COMMA | N2 | COMMA | COMMA |
+| 39 | DOT | PG_UP | DOT | N3 | DOT | DOT |
+| 40 | FSLH | RALT | FSLH | DOT | FSLH | FSLH |
 | 41 | ESC | to GAME | ESC | soft_off | to BASE | to BASE |
 | 42 | LGUI | LGUI | LGUI | LGUI | LALT | LALT |
 | 43 | mo EXT | trans | mo EXT | mo EXT | mo GAME_NUM | mo GAME_NUM |
