@@ -11,9 +11,11 @@ transform = (p / 'boards/shields/eyelash_corne/eyelash_corne.dtsi').read_text().
 assert len(re.findall(r'RC\(', transform)) == 48
 assert all(len(bs) == 48 for bs in bindings.values())
 for layer in ('base', 'ext', 'sym', 'num'):
-    assert bindings[layer][42:46] == ['&kp LALT', '&kp BSPC', '&kp SPACE', '&kp ENTER']
-assert bindings['base'][46:48] == ['&mo EXT', '&mo SYM']
-assert bindings['ext'][46] == '&trans' and bindings['sym'][47] == '&trans'
+    assert bindings[layer][42:47] == ['&kp LCTRL', '&kp LALT', '&kp LGUI', '&kp SPACE', '&kp BSPC']
+    assert '&kp ENTER' not in bindings[layer]
+assert bindings['base'][47] == '&mo EXT'
+assert bindings['base'][34] == '&mo SYM'
+assert bindings['ext'][47] == '&trans' and bindings['sym'][34] == '&trans'
 assert all(k not in bindings['ext'] for k in ['&kp HOME', '&kp END', '&kp PG_UP', '&kp PG_DN'])
 game = bindings['game']
 for layer in ('game', 'game_num'):
@@ -69,8 +71,9 @@ print('PASS: joystick directions, layer clicks and existing mouse support')
 # Cmd is a plain held key: BASE restores A after the EXT thumb is released.
 assert bindings['ext'][24] == '&kp LGUI'
 assert bindings['base'][14] == '&kp A'
-assert bindings['base'][42] == '&kp LALT'
-print('PASS: left Space/Backspace/Option, right EXT access and Cmd+A bindings')
+assert bindings['base'][43] == '&kp LALT'
+assert bindings['base'][44] == '&kp LGUI'
+print('PASS: left Ctrl/Option/Cmd, right Space/Backspace, EXT/SYM access and combo-only Enter')
 
 assert [physical[i]['row'] for i in [0,13,28]] == [0,1,2]
 assert all(physical[i]['col'] == 0 for i in [0,13,28])

@@ -1,32 +1,28 @@
 # Keymap reference
 
-US host layout. The supplied 48-position physical layout has six thumbs; physical hardware identity still needs confirmation.
+US host layout; 48 positions, including six thumbs, a five-way switch and encoder press. Physical hardware identity remains to be confirmed before flashing.
 
 ## Typing thumbs (BASE / EXT / SYM / NUM)
 
 | Reach | Left | Right |
 |---|---|---|
-| Inner | Space (44) | Enter (45) |
-| Middle | Backspace (43) | Hold EXT (46) |
-| Outer | Option (42) | Hold SYM (47) |
+| Inner | Command (44) | Space (45) |
+| Middle | Option (43) | Backspace (46) |
+| Outer | Ctrl (42) | Hold EXT (47) |
 
-NUM is held at position 12, the top outer right finger key. EXT is momentary, not a toggle.
+Typing Enter is the BASE comma+period combo; no dedicated Enter on typing layers. Hold the encoder-press key (34) for SYM; rotation still controls volume. Hold the top outer right key (12) for NUM. The outer left column is Esc/Tab/Shift, top to bottom, on every layer.
 
-EXT: A/S/D/F = Left/Down/Up/Right; J/K/L/semicolon = Shift/Cmd/Option/Ctrl. Hold right-thumb EXT, hold Option with the right ring finger, then use left-hand arrows or left-thumb Backspace. Home, End and Page keys are removed. F1–F12 remain available. EXT+bottom outer right enters GAME.
+EXT has A/S/D/F arrows and J/K/L/semicolon = Shift/Cmd/Option/Ctrl. No Home/End/Page keys. F1–F12 remain. Left-thumb Option plus right-thumb Backspace works directly on BASE. For Option+arrows, hold right-thumb EXT, left-thumb Option, then use A/S/D/F. Cmd+A/C/V/Z can use left inner-thumb Cmd directly. Alternatively, hold EXT, hold K (Cmd), release EXT, then press the letter and release K; the fork routes releases to the original press layer. Physical event testing remains pending.
 
-For Cmd+A: hold right-thumb EXT, press and keep holding K (Cmd), release EXT, press A, then release A and K. Cmd+C/V/Z works the same way. The fork remembers the pressed key's layer for release, so the original Cmd releases even though K has reverted to a letter. Physical event testing remains necessary before declaring the sequence verified on the device.
+BASE combos: W+E Escape; I+O Backspace; X+C Tab; comma+period Enter. Press within 40 ms after 150 ms without typing. Combos are BASE-only. For Enter after using SYM/NUM/EXT, release that layer first. Left-thumb Option remains usable with the right-hand Backspace combo on BASE.
 
-Left outer thumb Option is available on BASE: hold it and use right I+O for Option+Backspace without activating a layer. BASE combos: W+E Escape; I+O Backspace; X+C Tab; comma+period Enter. Press within 40 ms after 150 ms without typing. Combos are disabled on all other layers.
+NUM: U/I/O = 7/8/9, J/K/L = 4/5/6, M/comma/period = 1/2/3; N = 0, slash = decimal. A/S/D/F = Ctrl/Alt/Cmd/Shift. NUM+G selects USB, NUM+quote Bluetooth; X/C/V/B select Bluetooth profiles 0–3. NUM+Z unlocks Studio. NUM+bottom outer right held for two seconds soft-powers off; hardware reset wakes it. No pairing-clear keys.
 
-NUM: U/I/O = 7/8/9, J/K/L = 4/5/6, M/comma/period = 1/2/3; N = 0, slash = decimal. A/S/D/F = Ctrl/Alt/Cmd/Shift. NUM+G selects USB; NUM+quote selects Bluetooth. Bluetooth profiles 0–3, Studio unlock and two-second soft-off are retained. No pairing-clear bindings. Wake from soft-off using the hardware reset button.
+GAME remains separately optimized: plain movement/ability keys and dedicated modifiers, left-thumb number access, right-thumb Backspace and dedicated Enter. Its outer left column is Esc/Tab/Shift; Ctrl is at right semicolon. GAME NUM places 1–5 on Q–T and 6–0 on A–G. Bottom outer right exits to BASE. Release held keys before switching. No gaming combos or hold-taps.
 
-GAME keeps its previously configured dedicated modifiers, left-thumb number access, Space and right-thumb Backspace. GAME NUM puts 1–5 on Q–T and 6–0 on A–G. Bottom outer right exits either gaming layer to BASE. Release held keys before switching modes. Gaming has no combos or hold-tap behaviors.
-
-Joystick: directions move the mouse on every layer. Centre left-clicks, EXT centre right-clicks, SYM centre middle-clicks. Existing maximum mouse speed 1200 is retained. Centre+direction dragging depends on the physical switch permitting simultaneous presses. Encoder volume is unchanged.
+Joystick directions move the mouse on every layer. Centre left-clicks, EXT centre right-clicks, SYM centre middle-clicks. Existing maximum movement speed 1200 is retained; centre+direction dragging depends on the physical switch. Encoder volume is unchanged.
 
 ## Position reference
-
-The outer left finger column is Esc / Tab / Shift, top to bottom, on every layer (positions 0 / 13 / 28). GAME Ctrl is the right outer home-row semicolon position (26); Tab is now on the left outer home row.
 
 | Position | BASE | EXT | SYM | NUM | GAME | GAME NUM |
 |---|---|---|---|---|---|---|
@@ -59,12 +55,12 @@ The outer left finger column is Esc / Tab / Shift, top to bottom, on every layer
 | 26 | SEMI | LCTRL | PIPE | MINUS | LCTRL | LCTRL |
 | 27 | SQT | INS | DQT | out OUT_BLE | SQT | SQT |
 | 28 | LSHFT | LSHFT | LSHFT | LSHFT | LSHFT | LSHFT |
-| 29 | Z | F11 | LT | LALT | Z | Z |
+| 29 | Z | F11 | LT | studio_unlock | Z | Z |
 | 30 | X | F12 | GT | bt BT_SEL 0 | X | X |
 | 31 | C | C | LPAR | bt BT_SEL 1 | C | C |
 | 32 | V | V | RPAR | bt BT_SEL 2 | V | V |
 | 33 | B | B | UNDER | bt BT_SEL 3 | B | B |
-| 34 | SPACE | SPACE | SPACE | studio_unlock | SPACE | SPACE |
+| 34 | mo SYM | mo SYM | trans | mo SYM | SPACE | SPACE |
 | 35 | mmv MOVE_DOWN | mmv MOVE_DOWN | mmv MOVE_DOWN | mmv MOVE_DOWN | mmv MOVE_DOWN | mmv MOVE_DOWN |
 | 36 | N | N | PLUS | N0 | N | N |
 | 37 | M | M | EQUAL | N1 | M | M |
@@ -72,11 +68,11 @@ The outer left finger column is Esc / Tab / Shift, top to bottom, on every layer
 | 39 | DOT | DOT | DOT | N3 | DOT | DOT |
 | 40 | FSLH | DEL | FSLH | DOT | FSLH | FSLH |
 | 41 | ESC | to GAME | ESC | soft_off | to BASE | to BASE |
-| 42 | LALT | LALT | LALT | LALT | LALT | LALT |
-| 43 | BSPC | BSPC | BSPC | BSPC | mo GAME_NUM | mo GAME_NUM |
-| 44 | SPACE | SPACE | SPACE | SPACE | SPACE | SPACE |
-| 45 | ENTER | ENTER | ENTER | ENTER | BSPC | BSPC |
-| 46 | mo EXT | trans | mo EXT | mo EXT | RSHFT | RSHFT |
-| 47 | mo SYM | mo SYM | trans | mo SYM | ENTER | ENTER |
+| 42 | LCTRL | LCTRL | LCTRL | LCTRL | LALT | LALT |
+| 43 | LALT | LALT | LALT | LALT | mo GAME_NUM | mo GAME_NUM |
+| 44 | LGUI | LGUI | LGUI | LGUI | SPACE | SPACE |
+| 45 | SPACE | SPACE | SPACE | SPACE | BSPC | BSPC |
+| 46 | BSPC | BSPC | BSPC | BSPC | RSHFT | RSHFT |
+| 47 | mo EXT | trans | mo EXT | mo EXT | ENTER | ENTER |
 
-Thumb positions: left outer→inner 42,43,44; right inner→outer 45,46,47. Other positions follow `config/eyelash_corne.json`, including joystick and encoder press.
+Thumb positions: left outer→inner 42,43,44; right inner→outer 45,46,47. Other positions follow `config/eyelash_corne.json`.

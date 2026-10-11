@@ -15,10 +15,10 @@ Run `python3 scripts/check_keymap.py`, then require successful firmware and safe
 Static checks validate mapping and isolation, not timing. After approved flashing, test in a key-event viewer:
 
 - Outer left column: top Esc, middle Tab, bottom Shift on every layer. In GAME, verify dedicated Ctrl at the right outer home-row semicolon position.
-- Every physical key and all six thumbs; left middle-thumb Backspace repeats normally and left inner-thumb Space types normally.
+- Every physical key and all six thumbs; right middle-thumb Backspace repeats normally, right inner-thumb Space types normally, and left thumbs hold Ctrl/Option/Cmd.
 - Each BASE chord emits one intended key; ordinary fast WE/IO/XC/comma-period rolls remain ordinary typing. Test both release orders, and tune timing only from observed results.
-- EXT A/S/D/F = Left/Down/Up/Right and F1–F12; SYM punctuation with the host's US layout; NUM U/I/O = 7/8/9, J/K/L = 4/5/6, M/comma/period = 1/2/3, N = 0 and slash = decimal, plus profile selection.
-- Cmd+A/C/V/Z: hold right-thumb EXT, hold K (Cmd), release EXT, tap the left-hand letter, then release K. Verify Cmd remains down until K releases, A/C/V/Z type no arrow, and no Cmd sticks. Test the analogous Option/Shift/Ctrl sequence. BASE left-thumb Option plus I+O must output Option+Backspace.
+- EXT A/S/D/F = Left/Down/Up/Right and F1–F12; SYM punctuation with the host's US layout; hold encoder press for SYM and top outer right for NUM. Release typing layers and test combo-only Enter; GAME retains dedicated Enter. NUM U/I/O = 7/8/9, J/K/L = 4/5/6, M/comma/period = 1/2/3, N = 0 and slash = decimal, plus profile selection.
+- Cmd+A/C/V/Z: hold right-thumb EXT, hold K (Cmd), release EXT, tap the left-hand letter, then release K. Verify Cmd remains down until K releases, A/C/V/Z type no arrow, and no Cmd sticks. Test the analogous Option/Shift/Ctrl sequence. BASE left middle-thumb Option plus I+O must output Option+Backspace. Test direct left-thumb Cmd+A/C/V/Z.
 - EXT: hold its right thumb and use right-hand Cmd/Shift/Alt/Ctrl with left-hand arrows. NUM: use left-hand Ctrl/Alt/Cmd/Shift with right-hand digits. Verify press/release events and multi-modifier chords.
 - GAME simultaneous W+E, I+O, X+C and comma+period never emit combos. Hold W/A/S/D, repeat Q/E/R/F and digits, and combine dedicated Shift/Ctrl/Alt. No stuck keys on release.
 - Enter GAME via EXT + bottom outer right, release both, and exit with bottom outer right. Repeat while other keys were held and verify all release events. Release keys before switching during normal use.
