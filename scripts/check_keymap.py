@@ -15,7 +15,7 @@ for layer in ('base', 'ext', 'sym', 'num'):
     assert '&kp ENTER' not in bindings[layer]
 assert bindings['base'][47] == '&mo EXT'
 assert bindings['base'][41] == '&mo SYM'
-assert all(bindings[layer][34] == '&none' for layer in ('base','ext','sym','num'))
+assert all(bindings[layer][34] == '&kp C_PP' for layer in ('base','ext','sym','num'))
 assert bindings['ext'][47] == '&trans' and bindings['sym'][41] == '&trans'
 assert all(k not in bindings['ext'] for k in ['&kp HOME', '&kp END', '&kp PG_UP', '&kp PG_DN'])
 game = bindings['game']
