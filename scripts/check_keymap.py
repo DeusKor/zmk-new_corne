@@ -15,7 +15,7 @@ for layer in ('base', 'ext', 'sym', 'num'):
     assert '&kp ENTER' not in bindings[layer]
 assert bindings['base'][47] == '&mo EXT'
 assert bindings['base'][41] == '&mo SYM'
-assert all(bindings[layer][34] == '&kp C_PP' for layer in ('base','ext','sym','num'))
+assert all(bindings[layer][34] == '&media_taps' for layer in ('base','ext','sym','num'))
 assert bindings['ext'][47] == '&trans' and bindings['sym'][41] == '&trans'
 assert all(k not in bindings['ext'] for k in ['&kp HOME', '&kp END', '&kp PG_UP', '&kp PG_DN'])
 game = bindings['game']
@@ -86,3 +86,9 @@ print('PASS: outer left Esc/Tab/Shift on all layers and dedicated game Ctrl')
 assert bindings['num'][1:6] == ['&bt BT_SEL '+str(i) for i in range(5)]
 assert bindings['num'][30:34] == ['&kp '+k for k in 'XCVB']
 print('PASS: all five Bluetooth slots on the settings top row, no duplicate lower-row selectors')
+
+media = re.search(r"media_taps: media_taps\s*\{(.*?)\};", s, re.S)[1]
+assert 'compatible = "zmk,behavior-tap-dance"' in media
+assert "tapping-term-ms = <250>" in media
+assert "bindings = <&kp C_PP>, <&kp C_NEXT>, <&kp C_PREV>" in media
+print("PASS: media knob single/double/triple taps on typing layers")

@@ -34,3 +34,5 @@ Present the owner with hardware evidence, exact left/right artifacts and hashes,
 ## Rollback
 
 Re-enter each affected half's verified bootloader and restore its saved known-good UF2 using the same procedure. Restore runtime mappings only through supported tools. Do not erase settings, clear Bluetooth bonds, replace the bootloader or change dependency versions. If recovery requires a settings reset, stop and seek separate approval explaining pairing loss. Firmware rollback alone cannot guarantee restoration after persistent-setting migrations, which this change does not intentionally introduce.
+
+- On typing layers, test knob single press = play/pause, double = next track, triple = previous track. Presses must be within 250 ms of each other. Rotation still controls volume.

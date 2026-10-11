@@ -23,6 +23,13 @@
 
 / {
     behaviors {
+        media_taps: media_taps {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&kp C_PP>, <&kp C_NEXT>, <&kp C_PREV>;
+        };
+
         rsr_vol: rsr_vol {
             compatible = "zmk,behavior-runtime-sensor-rotate";
             #sensor-binding-cells = <0>;
@@ -74,7 +81,7 @@
             bindings = <
                 &kp ESC  &kp Q  &kp W  &kp E  &kp R  &kp T  &mmv MOVE_UP  &kp Y  &kp U  &kp I  &kp O  &kp P  &mo NUM
                 &kp TAB  &kp A  &kp S  &kp D  &kp F  &kp G  &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &kp H  &kp J  &kp K  &kp L  &kp SEMI  &kp SQT
-                &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp C_PP  &mmv MOVE_DOWN  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &mo SYM
+                &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &media_taps  &mmv MOVE_DOWN  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &mo SYM
                 &kp LCTRL  &kp LALT  &kp LGUI  &kp BSPC  &kp SPACE  &mo EXT
             >;
             sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -84,7 +91,7 @@
             bindings = <
                 &kp ESC  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &mmv MOVE_UP  &kp FSLH  &kp N7  &kp N8  &kp N9  &kp ASTRK  &mo NUM
                 &kp TAB  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp DEL  &mmv MOVE_LEFT  &mkp RCLK  &mmv MOVE_RIGHT  &kp PLUS  &kp N4  &kp N5  &kp N6  &kp MINUS  &kp SQT
-                &kp LSHFT  &kp F11  &kp F12  &kp C  &kp V  &kp B  &kp C_PP  &mmv MOVE_DOWN  &kp N0  &kp N1  &kp N2  &kp N3  &kp DOT  &to GAME
+                &kp LSHFT  &kp F11  &kp F12  &kp C  &kp V  &kp B  &media_taps  &mmv MOVE_DOWN  &kp N0  &kp N1  &kp N2  &kp N3  &kp DOT  &to GAME
                 &kp LCTRL  &kp LALT  &kp LGUI  &kp BSPC  &kp SPACE  &trans
             >;
             sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -94,7 +101,7 @@
             bindings = <
                 &kp ESC  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &mmv MOVE_UP  &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR  &mo NUM
                 &kp TAB  &kp GRAVE  &kp TILDE  &kp LBKT  &kp RBKT  &kp BSLH  &mmv MOVE_LEFT  &mkp MCLK  &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp LBRC  &kp RBRC  &kp PIPE  &kp DQT
-                &kp LSHFT  &kp LT  &kp GT  &kp LPAR  &kp RPAR  &kp UNDER  &kp C_PP  &mmv MOVE_DOWN  &kp PLUS  &kp EQUAL  &kp COMMA  &kp DOT  &kp FSLH  &trans
+                &kp LSHFT  &kp LT  &kp GT  &kp LPAR  &kp RPAR  &kp UNDER  &media_taps  &mmv MOVE_DOWN  &kp PLUS  &kp EQUAL  &kp COMMA  &kp DOT  &kp FSLH  &trans
                 &kp LCTRL  &kp LALT  &kp LGUI  &kp BSPC  &kp SPACE  &mo EXT
             >;
             sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -104,7 +111,7 @@
             bindings = <
                 &kp ESC  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &mmv MOVE_UP  &kp FSLH  &kp N7  &kp N8  &kp N9  &kp ASTRK  &trans
                 &kp TAB  &kp A  &kp S  &kp D  &kp F  &out OUT_USB  &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &kp PLUS  &kp N4  &kp N5  &kp N6  &kp MINUS  &out OUT_BLE
-                &kp LSHFT  &studio_unlock  &kp X  &kp C  &kp V  &kp B  &kp C_PP  &mmv MOVE_DOWN  &kp N0  &kp N1  &kp N2  &kp N3  &kp DOT  &soft_off
+                &kp LSHFT  &studio_unlock  &kp X  &kp C  &kp V  &kp B  &media_taps  &mmv MOVE_DOWN  &kp N0  &kp N1  &kp N2  &kp N3  &kp DOT  &soft_off
                 &kp LCTRL  &kp LALT  &kp LGUI  &kp BSPC  &kp SPACE  &mo EXT
             >;
             sensor-bindings = <&rsr_vol &rsr_trans>;
