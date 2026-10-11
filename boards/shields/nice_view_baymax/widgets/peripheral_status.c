@@ -114,15 +114,25 @@ ZMK_SUBSCRIPTION(widget_peripheral_status, zmk_split_peripheral_status_changed);
 static void animate_baymax(lv_timer_t *timer) {
     struct zmk_widget_status *widget = timer->user_data;
     if (k_uptime_get() - widget->last_press > 4000) {
+        widget->frame = 0;
         lv_img_set_src(widget->art, &baymax_rest);
         lv_timer_pause(timer);
         return;
     }
-    widget->frame = (widget->frame + 1) % 3;
-    const lv_img_dsc_t *frames[] = {&baymax_wave, &baymax_blink, &baymax_rest};
-    lv_img_set_src(widget->art, frames[widget->frame]);
-    // Brief blink; otherwise a slow wave/rest cycle only during activity.
-    lv_timer_set_period(timer, widget->frame == 1 ? 160 : 1200);
+    if (widget->frame != 0) {
+        widget->frame = 0;
+        lv_img_set_src(widget->art, &baymax_rest);
+        lv_timer_set_period(timer, 2800);
+    } else if (++widget->blink_count >= 10) {
+        widget->blink_count = 0;
+        widget->frame = 2;
+        lv_img_set_src(widget->art, &baymax_wave);
+        lv_timer_set_period(timer, 800);
+    } else {
+        widget->frame = 1;
+        lv_img_set_src(widget->art, &baymax_blink);
+        lv_timer_set_period(timer, 160);
+    }
 }
 
 struct baymax_activity_state { int64_t press_time; };
@@ -139,8 +149,8 @@ static void baymax_activity_update_cb(struct baymax_activity_state state) {
         widget->last_press = state.press_time;
         if (widget->animation->paused) {
             widget->frame = 0;
-            lv_img_set_src(widget->art, &baymax_wave);
-            lv_timer_set_period(widget->animation, 1200);
+            lv_img_set_src(widget->art, &baymax_rest);
+            lv_timer_set_period(widget->animation, 2800);
             lv_timer_reset(widget->animation);
             lv_timer_resume(widget->animation);
         }
@@ -160,7 +170,7 @@ int zmk_widget_status_init(struct zmk_widget_status *widget, lv_obj_t *parent) {
     lv_obj_t *art = lv_img_create(widget->obj);
     widget->art = art;
     lv_img_set_src(art, &baymax_rest);
-    widget->animation = lv_timer_create(animate_baymax, 1200, widget);
+    widget->animation = lv_timer_create(animate_baymax, 2800, widget);
     lv_timer_pause(widget->animation);
     lv_obj_align(art, LV_ALIGN_TOP_LEFT, 0, 0);
 

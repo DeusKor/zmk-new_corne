@@ -20,6 +20,7 @@ struct zmk_widget_status {
     lv_timer_t *animation;
     int64_t last_press;
     uint8_t frame;
+    uint8_t blink_count;
 };
 
 int zmk_widget_status_init(struct zmk_widget_status *widget, lv_obj_t *parent);

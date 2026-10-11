@@ -79,4 +79,4 @@ Thumb positions: left outer→inner 42,43,44; right inner→outer 45,46,47. Othe
 
 ## Right display artwork
 
-The right half uses Baymax artwork with a brief wave/blink on right-half key activity and a static rest image when idle. Existing battery, charging and split-connection indicators are unchanged; the left display is unchanged. See `boards/shields/nice_view_baymax/README.md`.
+The right half uses Baymax artwork with brief blinks on right-half key activity and a rare wave (every tenth animation) and a static rest image when idle. Existing battery, charging and split-connection indicators are unchanged; the left display is unchanged. See `boards/shields/nice_view_baymax/README.md`.

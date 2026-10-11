@@ -7,7 +7,8 @@ status drawing functions, charging icon and battery/connection listeners are unc
 Only the right build selects this shield; the left still uses upstream nice_view.
 
 Baymax replaces the random mountain/balloon artwork. Right-half key presses start
-an occasional wave/blink. After four seconds without a right-half press, the
+a brief blink about every three seconds of activity; every tenth animation is
+a short wave. Waking from idle starts in the rest pose instead of waving. After four seconds without a right-half press, the
 animation returns to rest and pauses its LVGL timer. Initial/idle artwork is static.
 Battery and connection events continue to update normally. There is no WPM or
 layer label added, and no keymap or pairing change.
