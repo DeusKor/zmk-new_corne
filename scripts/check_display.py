@@ -57,4 +57,4 @@ for shield in ("nice_view_focus", "nice_view_baymax"):
 # Outline interiors must remain unfilled in the actual packed image.
 for body in re.findall(r"baymax_\w+_map\[\] = \{(.*?)\};", art, re.S):
     data=list(map(int,re.findall(r"\d+",body)))[8:]
-    assert sum(byte.bit_count() for byte in data) < 1000
+    assert sum(bin(byte).count("1") for byte in data) < 1000
