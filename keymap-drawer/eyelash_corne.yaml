@@ -43,12 +43,12 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - $$mdi:keyboard-esc$$
-  - LGUI
-  - EXT
-  - $$mdi:keyboard-space$$
+  - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:backspace$$', type: backspace}
-  - SYM
+  - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
+  - EXT
+  - SYM
   EXT:
   - $$mdi:keyboard-tab$$
   - F1
@@ -72,7 +72,7 @@ layers:
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-right-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - $$mdi:arrow-left-bold$$
+  - $$mdi:keyboard-esc$$
   - $$mdi:apple-keyboard-shift$$
   - LGUI
   - $$mdi:apple-keyboard-option$$
@@ -86,18 +86,18 @@ layers:
   - B
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - HOME
-  - END
-  - PG DN
-  - PG UP
-  - $$mdi:apple-keyboard-option$$
+  - N
+  - M
+  - {t: ',', s: <}
+  - {t: ., s: '>'}
+  - $$mdi:backspace-reverse-outline$$
   - {t: GAME, h: toggle}
-  - LGUI
-  - {type: held}
-  - $$mdi:keyboard-space$$
+  - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:backspace$$', type: backspace}
-  - SYM
+  - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {type: held}
+  - SYM
   SYM:
   - $$mdi:keyboard-tab$$
   - '!'
@@ -141,12 +141,12 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - $$mdi:keyboard-esc$$
-  - LGUI
-  - {t: EXT, type: held alternate}
-  - $$mdi:keyboard-space$$
+  - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:backspace$$', type: backspace}
-  - {type: held}
+  - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: EXT, type: held alternate}
+  - {type: held}
   NUM:
   - $$mdi:keyboard-tab$$
   - {t: '1', s: '!'}
@@ -190,12 +190,12 @@ layers:
   - {t: '3', s: '#'}
   - {t: ., s: '>'}
   - '&soft_off'
-  - LGUI
-  - {t: EXT, type: held alternate}
-  - $$mdi:keyboard-space$$
+  - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: SYM, type: held alternate}
+  - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: EXT, type: held alternate}
+  - {t: SYM, type: held alternate}
   GAME:
   - $$mdi:keyboard-esc$$
   - Q
