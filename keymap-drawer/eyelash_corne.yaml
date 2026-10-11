@@ -46,8 +46,8 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
   - LGUI
-  - $$mdi:keyboard-space$$
   - {t: '$$mdi:backspace$$', type: backspace}
+  - $$mdi:keyboard-space$$
   - EXT
   EXT:
   - $$mdi:keyboard-esc$$
@@ -95,8 +95,8 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
   - LGUI
-  - $$mdi:keyboard-space$$
   - {t: '$$mdi:backspace$$', type: backspace}
+  - $$mdi:keyboard-space$$
   - {type: held}
   SYM:
   - $$mdi:keyboard-esc$$
@@ -144,8 +144,8 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
   - LGUI
-  - $$mdi:keyboard-space$$
   - {t: '$$mdi:backspace$$', type: backspace}
+  - $$mdi:keyboard-space$$
   - EXT
   BT:
   - $$mdi:keyboard-esc$$
@@ -193,8 +193,8 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
   - LGUI
-  - $$mdi:keyboard-space$$
   - {t: '$$mdi:backspace$$', type: backspace}
+  - $$mdi:keyboard-space$$
   - {t: EXT, type: held alternate}
   GAME:
   - $$mdi:keyboard-esc$$
@@ -304,6 +304,6 @@ combos:
 - p: [30, 31]
   k: $$mdi:keyboard-tab$$
   l: [BASE]
-- p: [38, 39]
+- p: [24, 25]
   k: {t: '$$mdi:keyboard-return$$', type: enter}
   l: [BASE]
