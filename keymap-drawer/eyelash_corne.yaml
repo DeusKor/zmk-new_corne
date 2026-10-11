@@ -35,7 +35,7 @@ layers:
   - C
   - V
   - B
-  - $$mdi:play-pause$$
+  - '&media_taps'
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - N
   - M
@@ -84,7 +84,7 @@ layers:
   - C
   - V
   - B
-  - $$mdi:play-pause$$
+  - '&media_taps'
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - {t: '0', s: )}
   - {t: '1', s: '!'}
@@ -133,7 +133,7 @@ layers:
   - (
   - )
   - _
-  - $$mdi:play-pause$$
+  - '&media_taps'
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - +
   - {t: '=', s: +}
@@ -182,7 +182,7 @@ layers:
   - C
   - V
   - B
-  - $$mdi:play-pause$$
+  - '&media_taps'
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - {t: '0', s: )}
   - {t: '1', s: '!'}
