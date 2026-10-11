@@ -26,9 +26,11 @@ Joystick: directions move the mouse on every layer. Centre left-clicks, EXT cent
 
 ## Position reference
 
+The outer left finger column is Esc / Tab / Shift, top to bottom, on every layer (positions 0 / 13 / 28). GAME Ctrl is the right outer home-row semicolon position (26); Tab is now on the left outer home row.
+
 | Position | BASE | EXT | SYM | NUM | GAME | GAME NUM |
 |---|---|---|---|---|---|---|
-| 0 | TAB | TAB | TAB | TAB | ESC | ESC |
+| 0 | ESC | ESC | ESC | ESC | ESC | ESC |
 | 1 | Q | F1 | EXCL | N1 | Q | N1 |
 | 2 | W | F2 | AT | N2 | W | N2 |
 | 3 | E | F3 | HASH | N3 | E | N3 |
@@ -41,7 +43,7 @@ Joystick: directions move the mouse on every layer. Centre left-clicks, EXT cent
 | 10 | O | F9 | LPAR | N9 | N4 | N4 |
 | 11 | P | F10 | RPAR | ASTRK | N5 | N5 |
 | 12 | mo NUM | mo NUM | mo NUM | trans | N6 | N6 |
-| 13 | LSHFT | LSHFT | LSHFT | LSHFT | LSHFT | LSHFT |
+| 13 | TAB | TAB | TAB | TAB | TAB | TAB |
 | 14 | A | LEFT | GRAVE | LCTRL | A | N6 |
 | 15 | S | DOWN | TILDE | LALT | S | N7 |
 | 16 | D | UP | LBKT | LGUI | D | N8 |
@@ -54,9 +56,9 @@ Joystick: directions move the mouse on every layer. Centre left-clicks, EXT cent
 | 23 | J | LSHFT | EQUAL | N4 | N8 | N8 |
 | 24 | K | LGUI | LBRC | N5 | N9 | N9 |
 | 25 | L | LALT | RBRC | N6 | N0 | N0 |
-| 26 | SEMI | LCTRL | PIPE | MINUS | TAB | TAB |
+| 26 | SEMI | LCTRL | PIPE | MINUS | LCTRL | LCTRL |
 | 27 | SQT | INS | DQT | out OUT_BLE | SQT | SQT |
-| 28 | LCTRL | LCTRL | LCTRL | LCTRL | LCTRL | LCTRL |
+| 28 | LSHFT | LSHFT | LSHFT | LSHFT | LSHFT | LSHFT |
 | 29 | Z | F11 | LT | LALT | Z | Z |
 | 30 | X | F12 | GT | bt BT_SEL 0 | X | X |
 | 31 | C | C | LPAR | bt BT_SEL 1 | C | C |

@@ -14,6 +14,7 @@ Run `python3 scripts/check_keymap.py`, then require successful firmware and safe
 
 Static checks validate mapping and isolation, not timing. After approved flashing, test in a key-event viewer:
 
+- Outer left column: top Esc, middle Tab, bottom Shift on every layer. In GAME, verify dedicated Ctrl at the right outer home-row semicolon position.
 - Every physical key and all six thumbs; left middle-thumb Backspace repeats normally and left inner-thumb Space types normally.
 - Each BASE chord emits one intended key; ordinary fast WE/IO/XC/comma-period rolls remain ordinary typing. Test both release orders, and tune timing only from observed results.
 - EXT A/S/D/F = Left/Down/Up/Right and F1–F12; SYM punctuation with the host's US layout; NUM U/I/O = 7/8/9, J/K/L = 4/5/6, M/comma/period = 1/2/3, N = 0 and slash = decimal, plus profile selection.

@@ -71,3 +71,9 @@ assert bindings['ext'][24] == '&kp LGUI'
 assert bindings['base'][14] == '&kp A'
 assert bindings['base'][42] == '&kp LALT'
 print('PASS: left Space/Backspace/Option, right EXT access and Cmd+A bindings')
+
+assert [physical[i]['row'] for i in [0,13,28]] == [0,1,2]
+assert all(physical[i]['col'] == 0 for i in [0,13,28])
+assert all([bs[i] for i in [0,13,28]] == ['&kp ESC','&kp TAB','&kp LSHFT'] for bs in bindings.values())
+assert all(bindings[n][26] == '&kp LCTRL' for n in ['game','game_num'])
+print('PASS: outer left Esc/Tab/Shift on all layers and dedicated game Ctrl')
