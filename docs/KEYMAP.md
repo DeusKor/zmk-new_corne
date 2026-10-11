@@ -76,3 +76,7 @@ Joystick directions move the mouse on every layer. Centre left-clicks, EXT centr
 | 47 | mo EXT | trans | mo EXT | mo EXT | ENTER | ENTER |
 
 Thumb positions: left outer→inner 42,43,44; right inner→outer 45,46,47. Other positions follow `config/eyelash_corne.json`.
+
+## Right display artwork
+
+The right half uses Baymax artwork with a brief wave/blink on right-half key activity and a static rest image when idle. Existing battery, charging and split-connection indicators are unchanged; the left display is unchanged. See `boards/shields/nice_view_baymax/README.md`.

@@ -9,3 +9,4 @@ jobs:
         with:
           python-version: '3.x'
       - run: python scripts/check_keymap.py
+      - run: python scripts/check_display.py
