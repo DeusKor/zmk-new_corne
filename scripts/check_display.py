@@ -42,3 +42,11 @@ assert 'state->active_profile_index + 1' in focus
 assert all(k in focus for k in ['"LINKED"','"OFFLINE"','"NEW"','"USB"'])
 assert 'display-name = "BT"' in (r/'config/eyelash_corne.keymap').read_text()
 print('PASS: compact selected-slot status, no WPM graph, BT layer name')
+
+import json
+quotes=(r/'boards/shields/nice_view_focus/widgets/quotes.h').read_text()
+messages=[json.loads(line.strip().rstrip(',')) for line in quotes.splitlines() if line.strip().startswith('"')]
+assert len(messages)==100 and len(set(messages))==100
+assert all(len(q.splitlines())<=8 and all(len(line)<=8 for line in q.splitlines()) for q in messages)
+assert 'sys_rand32_get() % ARRAY_SIZE(focus_quotes)' in focus
+print('PASS: 100 unique startup quotes fit the 68x68 monospace region')

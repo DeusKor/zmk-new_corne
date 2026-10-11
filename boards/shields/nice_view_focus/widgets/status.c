@@ -6,6 +6,8 @@
  */
 
 #include <zephyr/kernel.h>
+#include <zephyr/random/random.h>
+#include "quotes.h"
 
 #include <zephyr/logging/log.h>
 LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
@@ -23,6 +25,8 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 #include <zmk/ble.h>
 #include <zmk/endpoints.h>
 #include <zmk/keymap.h>
+
+static const char *startup_quote;
 
 static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
 
@@ -69,6 +73,9 @@ static void draw_middle(lv_obj_t *widget, lv_color_t cbuf[], const struct status
     lv_draw_rect_dsc_t background;
     init_rect_dsc(&background, LVGL_BACKGROUND);
     lv_canvas_draw_rect(canvas, 0, 0, CANVAS_SIZE, CANVAS_SIZE, &background);
+    lv_draw_label_dsc_t quote;
+    init_label_dsc(&quote, LVGL_FOREGROUND, &lv_font_unscii_8, LV_TEXT_ALIGN_CENTER);
+    lv_canvas_draw_text(canvas, 0, 0, CANVAS_SIZE, &quote, startup_quote);
     rotate_canvas(canvas, cbuf);
 }
 
@@ -202,6 +209,9 @@ ZMK_DISPLAY_WIDGET_LISTENER(widget_layer_status, struct layer_status_state, laye
 ZMK_SUBSCRIPTION(widget_layer_status, zmk_layer_state_changed);
 
 int zmk_widget_status_init(struct zmk_widget_status *widget, lv_obj_t *parent) {
+    if (!startup_quote) {
+        startup_quote = focus_quotes[sys_rand32_get() % ARRAY_SIZE(focus_quotes)];
+    }
     widget->obj = lv_obj_create(parent);
     lv_obj_set_size(widget->obj, 160, 68);
     lv_obj_t *top = lv_canvas_create(widget->obj);
