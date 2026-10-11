@@ -11,7 +11,7 @@ transform = (p / 'boards/shields/eyelash_corne/eyelash_corne.dtsi').read_text().
 assert len(re.findall(r'RC\(', transform)) == 48
 assert all(len(bs) == 48 for bs in bindings.values())
 for layer in ('base', 'ext', 'sym', 'num'):
-    assert bindings[layer][42:47] == ['&kp LCTRL', '&kp LALT', '&kp LGUI', '&kp SPACE', '&kp BSPC']
+    assert bindings[layer][42:47] == ['&kp LCTRL', '&kp LALT', '&kp LGUI', '&kp BSPC', '&kp SPACE']
     assert '&kp ENTER' not in bindings[layer]
 assert bindings['base'][47] == '&mo EXT'
 assert bindings['base'][41] == '&mo SYM'
@@ -29,7 +29,7 @@ for i, key in {1:'Q',2:'W',3:'E',4:'R',14:'A',15:'S',16:'D',17:'F'}.items():
 assert all('&kp N' + str(i) in game for i in range(10))
 assert all('&kp '+k in game for k in ['LSHFT','LCTRL','LALT'])
 assert game[41] == '&to BASE' and bindings['ext'][41] == '&to GAME'
-expected = {(2,3): ('W','E','ESC'), (9,10): ('I','O','BSPC'), (30,31): ('X','C','TAB'), (38,39): ('COMMA','DOT','ENTER')}
+expected = {(2,3): ('W','E','ESC'), (9,10): ('I','O','BSPC'), (30,31): ('X','C','TAB'), (24,25): ('K','L','ENTER')}
 combos = re.findall(r'combo_\w+\s*\{(.*?)\};', s, re.S)
 assert len(combos) == 4
 for c in combos:

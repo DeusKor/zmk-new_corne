@@ -122,7 +122,7 @@ for name, pixels in zip(('rest','blink','wave'), frames):
         for x in range(0,H,8):
             data.append(sum((row[x+i] if x+i < H else 0) << (7-i) for i in range(8)))
     lines += [f'static const uint8_t baymax_{name}_map[] = {{',
-              '255,255,255,255, 0,0,0,255,']
+              '0,0,0,255, 255,255,255,255,']
     lines += [','.join(map(str,data[i:i+18]))+',' for i in range(0,len(data),18)]
     lines += ['};',f'const lv_img_dsc_t baymax_{name} = {{',
               '.header.cf=LV_IMG_CF_INDEXED_1BIT, .header.always_zero=0,',
@@ -135,7 +135,7 @@ raw=bytearray()
 for y in range(height):
     raw.append(0)
     for pixels in frames:
-        for value in pixels[y//scale]:raw.extend(bytes([255*value])*scale)
+        for value in pixels[y//scale]:raw.extend(bytes([255*(1-value)])*scale)
 def chunk(kind,data):return struct.pack('>I',len(data))+kind+data+struct.pack('>I',zlib.crc32(kind+data))
 png=b'\x89PNG\r\n\x1a\n'+chunk(b'IHDR',struct.pack('>IIBBBBB',width,height,8,0,0,0,0))+chunk(b'IDAT',zlib.compress(raw))+chunk(b'IEND',b'')
 (ROOT/'docs/baymax-preview.png').write_bytes(png)

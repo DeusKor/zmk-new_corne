@@ -15,7 +15,7 @@ art=(p/'widgets/baymax.c').read_text()
 assert art.count('.header.w=140, .header.h=68') == 3
 assert 'LV_IMG_CF_INDEXED_1BIT' in art
 assert 'CONFIG_NICE_VIEW_WIDGET_INVERTED' not in art
-assert art.count('255,255,255,255, 0,0,0,255,') == 3
+assert art.count('0,0,0,255, 255,255,255,255,') == 3
 print('PASS: unchanged battery/connection drawing, right-only shield, bounded one-bit art and idle pause')
 
 # Inspect the actual packed LVGL bitmaps independently of the generator.
@@ -50,3 +50,6 @@ assert len(messages)==100 and len(set(messages))==100
 assert all(len(q.splitlines())<=5 and all(len(line)<=11 for line in q.splitlines()) for q in messages)
 assert 'sys_rand32_get() % ARRAY_SIZE(focus_quotes)' in focus
 print('PASS: 100 unique startup quotes fit the 68x68 small-font region')
+
+for shield in ("nice_view_focus", "nice_view_baymax"):
+    assert "CONFIG_NICE_VIEW_WIDGET_INVERTED=y" in (r / "boards/shields" / shield / f"{shield}.conf").read_text()
