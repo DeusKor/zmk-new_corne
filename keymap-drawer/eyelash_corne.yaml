@@ -35,14 +35,14 @@ layers:
   - C
   - V
   - B
-  - SYM
+  - $$mdi:play-pause$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - N
   - M
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - $$mdi:keyboard-esc$$
+  - SYM
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
   - LGUI
@@ -84,7 +84,7 @@ layers:
   - C
   - V
   - B
-  - SYM
+  - $$mdi:play-pause$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - {t: '0', s: )}
   - {t: '1', s: '!'}
@@ -133,20 +133,20 @@ layers:
   - (
   - )
   - _
-  - {type: held}
+  - $$mdi:play-pause$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - +
   - {t: '=', s: +}
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - $$mdi:keyboard-esc$$
+  - {type: held}
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
   - LGUI
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: EXT, type: held alternate}
+  - EXT
   NUM:
   - $$mdi:keyboard-esc$$
   - {t: '1', s: '!'}
@@ -182,14 +182,14 @@ layers:
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
   - {h: '3', s: '$$mdi:bluetooth-connect$$'}
   - {h: '4', s: '$$mdi:bluetooth-connect$$'}
-  - {t: SYM, type: held alternate}
+  - $$mdi:play-pause$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - {t: '0', s: )}
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
   - {t: '3', s: '#'}
   - {t: ., s: '>'}
-  - '&soft_off'
+  - {t: '&soft_off', type: held alternate}
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
   - LGUI
