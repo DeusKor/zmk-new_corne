@@ -82,3 +82,7 @@ assert all(physical[i]['col'] == 0 for i in [0,13,28])
 assert all([bs[i] for i in [0,13,28]] == ['&kp ESC','&kp TAB','&kp LSHFT'] for bs in bindings.values())
 assert all(bindings[n][26] == '&kp LCTRL' for n in ['game','game_num'])
 print('PASS: outer left Esc/Tab/Shift on all layers and dedicated game Ctrl')
+
+assert bindings['num'][1:6] == ['&bt BT_SEL '+str(i) for i in range(5)]
+assert bindings['num'][30:34] == ['&kp '+k for k in 'XCVB']
+print('PASS: all five Bluetooth slots on the settings top row, no duplicate lower-row selectors')

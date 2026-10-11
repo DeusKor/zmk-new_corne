@@ -16,7 +16,7 @@ EXT combines A/S/D/F arrows on the left with the right-hand numpad: U/I/O = 7/8/
 
 BASE combos: W+E Escape; I+O Backspace; X+C Tab; comma+period Enter. Press within 40 ms after 150 ms without typing. Combos are BASE-only. For Enter after using SYM/NUM/EXT, release that layer first. Left-thumb Option remains usable with the right-hand Backspace combo on BASE.
 
-NUM retains the same numpad plus connection and power controls: U/I/O = 7/8/9, J/K/L = 4/5/6, M/comma/period = 1/2/3; N = 0, slash = decimal. Left A/S/D/F remain letters; use thumb modifiers for modified numbers. NUM+G selects USB, NUM+quote Bluetooth; X/C/V/B select Bluetooth profiles 0–3. NUM+Z unlocks Studio. NUM+bottom outer right held for two seconds soft-powers off; hardware reset wakes it. No pairing-clear keys.
+NUM retains the same numpad plus connection and power controls: U/I/O = 7/8/9, J/K/L = 4/5/6, M/comma/period = 1/2/3; N = 0, slash = decimal. Left A/S/D/F remain letters; use thumb modifiers for modified numbers. NUM+G selects USB, NUM+quote Bluetooth; On layer 3, Q/W/E/R/T select Bluetooth slots 1–5 (internal indices 0–4). The old X/C/V/B selectors are restored to letters. NUM+Z unlocks Studio. NUM+bottom outer right held for two seconds soft-powers off; hardware reset wakes it. No pairing-clear keys.
 
 GAME remains separately optimized: plain movement/ability keys and dedicated modifiers, left-thumb number access, right-thumb Backspace and dedicated Enter. Its outer left column is Esc/Tab/Shift; Ctrl is at right semicolon. GAME NUM places 1–5 on Q–T and 6–0 on A–G. Bottom outer right exits to BASE. Release held keys before switching. No gaming combos or hold-taps.
 
@@ -27,11 +27,11 @@ Joystick directions move the mouse on every layer. Centre left-clicks, EXT centr
 | Position | BASE | EXT | SYM | NUM | GAME | GAME NUM |
 |---|---|---|---|---|---|---|
 | 0 | ESC | ESC | ESC | ESC | ESC | ESC |
-| 1 | Q | F1 | EXCL | N1 | Q | N1 |
-| 2 | W | F2 | AT | N2 | W | N2 |
-| 3 | E | F3 | HASH | N3 | E | N3 |
-| 4 | R | F4 | DLLR | N4 | R | N4 |
-| 5 | T | F5 | PRCNT | N5 | T | N5 |
+| 1 | Q | F1 | EXCL | bt BT_SEL 0 | Q | N1 |
+| 2 | W | F2 | AT | bt BT_SEL 1 | W | N2 |
+| 3 | E | F3 | HASH | bt BT_SEL 2 | E | N3 |
+| 4 | R | F4 | DLLR | bt BT_SEL 3 | R | N4 |
+| 5 | T | F5 | PRCNT | bt BT_SEL 4 | T | N5 |
 | 6 | mmv MOVE_UP | mmv MOVE_UP | mmv MOVE_UP | mmv MOVE_UP | mmv MOVE_UP | mmv MOVE_UP |
 | 7 | Y | FSLH | CARET | FSLH | N1 | N1 |
 | 8 | U | N7 | AMPS | N7 | N2 | N2 |
@@ -56,10 +56,10 @@ Joystick directions move the mouse on every layer. Centre left-clicks, EXT centr
 | 27 | SQT | SQT | DQT | out OUT_BLE | SQT | SQT |
 | 28 | LSHFT | LSHFT | LSHFT | LSHFT | LSHFT | LSHFT |
 | 29 | Z | F11 | LT | studio_unlock | Z | Z |
-| 30 | X | F12 | GT | bt BT_SEL 0 | X | X |
-| 31 | C | C | LPAR | bt BT_SEL 1 | C | C |
-| 32 | V | V | RPAR | bt BT_SEL 2 | V | V |
-| 33 | B | B | UNDER | bt BT_SEL 3 | B | B |
+| 30 | X | F12 | GT | X | X | X |
+| 31 | C | C | LPAR | C | C | C |
+| 32 | V | V | RPAR | V | V | V |
+| 33 | B | B | UNDER | B | B | B |
 | 34 | C_PP | C_PP | C_PP | C_PP | SPACE | SPACE |
 | 35 | mmv MOVE_DOWN | mmv MOVE_DOWN | mmv MOVE_DOWN | mmv MOVE_DOWN | mmv MOVE_DOWN | mmv MOVE_DOWN |
 | 36 | N | N0 | PLUS | N0 | N | N |
