@@ -57,11 +57,11 @@ layers:
   - F4
   - F5
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
-  - F6
-  - F7
-  - F8
-  - F9
-  - F10
+  - {t: /, s: '?'}
+  - {t: '7', s: '&'}
+  - {t: '8', s: '*'}
+  - {t: '9', s: (}
+  - '*'
   - NUM
   - $$mdi:keyboard-tab$$
   - $$mdi:arrow-left-bold$$
@@ -72,11 +72,11 @@ layers:
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-right-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - H
-  - J
-  - K
-  - L
-  - {t: ;, s: ':'}
+  - +
+  - {t: '4', s: $}
+  - {t: '5', s: '%'}
+  - {t: '6', s: ^}
+  - {t: '-', s: _}
   - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-shift$$
   - F11
@@ -86,11 +86,11 @@ layers:
   - B
   - SYM
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - N
-  - M
-  - {t: ',', s: <}
+  - {t: '0', s: )}
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
   - {t: ., s: '>'}
-  - $$mdi:backspace-reverse-outline$$
   - {t: GAME, h: toggle}
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
