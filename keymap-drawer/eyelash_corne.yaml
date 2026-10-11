@@ -35,7 +35,7 @@ layers:
   - C
   - V
   - B
-  - $$mdi:keyboard-space$$
+  - SYM
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - N
   - M
@@ -43,12 +43,12 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - $$mdi:keyboard-esc$$
+  - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - LGUI
   - $$mdi:keyboard-space$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: '$$mdi:backspace$$', type: backspace}
   - EXT
-  - SYM
   EXT:
   - $$mdi:keyboard-esc$$
   - F1
@@ -84,7 +84,7 @@ layers:
   - C
   - V
   - B
-  - $$mdi:keyboard-space$$
+  - SYM
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - N
   - M
@@ -92,12 +92,12 @@ layers:
   - {t: ., s: '>'}
   - $$mdi:backspace-reverse-outline$$
   - {t: GAME, h: toggle}
+  - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - LGUI
   - $$mdi:keyboard-space$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: '$$mdi:backspace$$', type: backspace}
   - {type: held}
-  - SYM
   SYM:
   - $$mdi:keyboard-esc$$
   - '!'
@@ -133,7 +133,7 @@ layers:
   - (
   - )
   - _
-  - $$mdi:keyboard-space$$
+  - {type: held}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - +
   - {t: '=', s: +}
@@ -141,12 +141,12 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - $$mdi:keyboard-esc$$
+  - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - LGUI
   - $$mdi:keyboard-space$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: '$$mdi:backspace$$', type: backspace}
   - {t: EXT, type: held alternate}
-  - {type: held}
   NUM:
   - $$mdi:keyboard-esc$$
   - {t: '1', s: '!'}
@@ -177,12 +177,12 @@ layers:
   - {t: '-', s: _}
   - OUT BLE
   - $$mdi:apple-keyboard-shift$$
-  - $$mdi:apple-keyboard-option$$
+  - '&studio_unlock'
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
   - {h: '3', s: '$$mdi:bluetooth-connect$$'}
   - {h: '4', s: '$$mdi:bluetooth-connect$$'}
-  - '&studio_unlock'
+  - {t: SYM, type: held alternate}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - {t: '0', s: )}
   - {t: '1', s: '!'}
@@ -190,12 +190,12 @@ layers:
   - {t: '3', s: '#'}
   - {t: ., s: '>'}
   - '&soft_off'
+  - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - LGUI
   - $$mdi:keyboard-space$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: '$$mdi:backspace$$', type: backspace}
   - {t: EXT, type: held alternate}
-  - {t: SYM, type: held alternate}
   GAME:
   - $$mdi:keyboard-esc$$
   - Q
