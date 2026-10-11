@@ -26,7 +26,8 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 #include <zmk/endpoints.h>
 #include <zmk/keymap.h>
 
-static const char *startup_quote;
+static const struct focus_quote *startup_quote;
+static unsigned int quote_page;
 
 static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
 
@@ -75,7 +76,15 @@ static void draw_middle(lv_obj_t *widget, lv_color_t cbuf[], const struct status
     lv_canvas_draw_rect(canvas, 0, 0, CANVAS_SIZE, CANVAS_SIZE, &background);
     lv_draw_label_dsc_t quote;
     init_label_dsc(&quote, LVGL_FOREGROUND, &lv_font_montserrat_10, LV_TEXT_ALIGN_CENTER);
-    lv_canvas_draw_text(canvas, 0, 0, CANVAS_SIZE, &quote, startup_quote);
+    lv_canvas_draw_text(canvas, 0, 0, CANVAS_SIZE, &quote,
+                        focus_quote_pages[startup_quote->first_page + quote_page]);
+    if (startup_quote->page_count > 1) {
+        char page[12];
+        snprintf(page, sizeof(page), "%u/%u", quote_page + 1, startup_quote->page_count);
+        lv_draw_label_dsc_t counter;
+        init_label_dsc(&counter, LVGL_FOREGROUND, &lv_font_unscii_8, LV_TEXT_ALIGN_CENTER);
+        lv_canvas_draw_text(canvas, 0, 56, CANVAS_SIZE, &counter, page);
+    }
     rotate_canvas(canvas, cbuf);
 }
 
@@ -208,9 +217,17 @@ ZMK_DISPLAY_WIDGET_LISTENER(widget_layer_status, struct layer_status_state, laye
 
 ZMK_SUBSCRIPTION(widget_layer_status, zmk_layer_state_changed);
 
+static void quote_page_tick(lv_timer_t *timer) {
+    quote_page = (quote_page + 1) % startup_quote->page_count;
+    struct zmk_widget_status *widget;
+    SYS_SLIST_FOR_EACH_CONTAINER(&widgets, widget, node) {
+        draw_middle(widget->obj, widget->cbuf2, &widget->state);
+    }
+}
+
 int zmk_widget_status_init(struct zmk_widget_status *widget, lv_obj_t *parent) {
     if (!startup_quote) {
-        startup_quote = focus_quotes[sys_rand32_get() % ARRAY_SIZE(focus_quotes)];
+        startup_quote = &focus_quotes[sys_rand32_get() % ARRAY_SIZE(focus_quotes)];
     }
     widget->obj = lv_obj_create(parent);
     lv_obj_set_size(widget->obj, 160, 68);
@@ -229,6 +246,9 @@ int zmk_widget_status_init(struct zmk_widget_status *widget, lv_obj_t *parent) {
     widget_output_status_init();
     widget_layer_status_init();
 
+    if (startup_quote->page_count > 1) {
+        lv_timer_create(quote_page_tick, 12000, NULL);
+    }
     return 0;
 }
 

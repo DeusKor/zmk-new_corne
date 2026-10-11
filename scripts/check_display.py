@@ -46,10 +46,12 @@ print('PASS: compact selected-slot status, no WPM graph, BT layer name')
 import json
 quotes=(r/'boards/shields/nice_view_focus/widgets/quotes.h').read_text()
 messages=[json.loads(line.strip().rstrip(',')) for line in quotes.splitlines() if line.strip().startswith('"')]
-assert len(messages)==100 and len(set(messages))==100
+records = re.findall(r"^    \{(\d+), (\d+)\},", quotes, re.M)
+assert len(records)==102
+assert sum(int(count) for first,count in records)==len(messages)
 assert all(len(q.splitlines())<=5 and all(len(line)<=11 for line in q.splitlines()) for q in messages)
 assert 'sys_rand32_get() % ARRAY_SIZE(focus_quotes)' in focus
-print('PASS: 100 unique startup quotes fit the 68x68 small-font region')
+print('PASS: 102 owner-supplied paged quotes fit the 68x68 small-font region')
 
 for shield in ("nice_view_focus", "nice_view_baymax"):
     assert "CONFIG_NICE_VIEW_WIDGET_INVERTED=y" in (r / "boards/shields" / shield / f"{shield}.conf").read_text()
