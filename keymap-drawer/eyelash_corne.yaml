@@ -72,12 +72,12 @@ layers:
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-right-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - $$mdi:keyboard-esc$$
-  - $$mdi:apple-keyboard-shift$$
-  - LGUI
-  - $$mdi:apple-keyboard-option$$
-  - $$mdi:apple-keyboard-control$$
-  - INS
+  - H
+  - J
+  - K
+  - L
+  - {t: ;, s: ':'}
+  - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-shift$$
   - F11
   - F12
@@ -162,10 +162,10 @@ layers:
   - '*'
   - {type: held}
   - $$mdi:keyboard-tab$$
-  - $$mdi:apple-keyboard-control$$
-  - $$mdi:apple-keyboard-option$$
-  - LGUI
-  - $$mdi:apple-keyboard-shift$$
+  - A
+  - S
+  - D
+  - F
   - OUT USB
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
