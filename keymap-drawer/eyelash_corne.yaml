@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: eyelash_corne}
 layers:
   BASE:
-  - $$mdi:keyboard-tab$$
+  - $$mdi:keyboard-esc$$
   - Q
   - W
   - E
@@ -14,7 +14,7 @@ layers:
   - O
   - P
   - NUM
-  - $$mdi:apple-keyboard-shift$$
+  - $$mdi:keyboard-tab$$
   - A
   - S
   - D
@@ -29,7 +29,7 @@ layers:
   - L
   - {t: ;, s: ':'}
   - {t: '''', s: '"'}
-  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-shift$$
   - Z
   - X
   - C
@@ -50,7 +50,7 @@ layers:
   - EXT
   - SYM
   EXT:
-  - $$mdi:keyboard-tab$$
+  - $$mdi:keyboard-esc$$
   - F1
   - F2
   - F3
@@ -63,7 +63,7 @@ layers:
   - F9
   - F10
   - NUM
-  - $$mdi:apple-keyboard-shift$$
+  - $$mdi:keyboard-tab$$
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-up-bold$$
@@ -78,7 +78,7 @@ layers:
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-control$$
   - INS
-  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-shift$$
   - F11
   - F12
   - C
@@ -99,7 +99,7 @@ layers:
   - {type: held}
   - SYM
   SYM:
-  - $$mdi:keyboard-tab$$
+  - $$mdi:keyboard-esc$$
   - '!'
   - '@'
   - '#'
@@ -112,7 +112,7 @@ layers:
   - (
   - )
   - NUM
-  - $$mdi:apple-keyboard-shift$$
+  - $$mdi:keyboard-tab$$
   - {t: '`', s: '~'}
   - '~'
   - {t: '[', s: '{'}
@@ -127,7 +127,7 @@ layers:
   - '}'
   - '|'
   - '"'
-  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-shift$$
   - <
   - '>'
   - (
@@ -148,7 +148,7 @@ layers:
   - {t: EXT, type: held alternate}
   - {type: held}
   NUM:
-  - $$mdi:keyboard-tab$$
+  - $$mdi:keyboard-esc$$
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
   - {t: '3', s: '#'}
@@ -161,7 +161,7 @@ layers:
   - {t: '9', s: (}
   - '*'
   - {type: held}
-  - $$mdi:apple-keyboard-shift$$
+  - $$mdi:keyboard-tab$$
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
   - LGUI
@@ -176,7 +176,7 @@ layers:
   - {t: '6', s: ^}
   - {t: '-', s: _}
   - OUT BLE
-  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-option$$
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
@@ -210,7 +210,7 @@ layers:
   - {t: '4', s: $}
   - {t: '5', s: '%'}
   - {t: '6', s: ^}
-  - $$mdi:apple-keyboard-shift$$
+  - $$mdi:keyboard-tab$$
   - A
   - S
   - D
@@ -223,9 +223,9 @@ layers:
   - {t: '8', s: '*'}
   - {t: '9', s: (}
   - {t: '0', s: )}
-  - $$mdi:keyboard-tab$$
-  - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-control$$
+  - {t: '''', s: '"'}
+  - $$mdi:apple-keyboard-shift$$
   - Z
   - X
   - C
@@ -259,7 +259,7 @@ layers:
   - {t: '4', s: $}
   - {t: '5', s: '%'}
   - {t: '6', s: ^}
-  - $$mdi:apple-keyboard-shift$$
+  - $$mdi:keyboard-tab$$
   - {t: '6', s: ^}
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}
@@ -272,9 +272,9 @@ layers:
   - {t: '8', s: '*'}
   - {t: '9', s: (}
   - {t: '0', s: )}
-  - $$mdi:keyboard-tab$$
-  - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-control$$
+  - {t: '''', s: '"'}
+  - $$mdi:apple-keyboard-shift$$
   - Z
   - X
   - C
