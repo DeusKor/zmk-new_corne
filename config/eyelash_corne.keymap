@@ -100,7 +100,7 @@
             sensor-bindings = <&rsr_vol &rsr_trans>;
         };
         num_layer {
-            display-name = "NUM";
+            display-name = "BT";
             bindings = <
                 &kp ESC  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &mmv MOVE_UP  &kp FSLH  &kp N7  &kp N8  &kp N9  &kp ASTRK  &trans
                 &kp TAB  &kp A  &kp S  &kp D  &kp F  &out OUT_USB  &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &kp PLUS  &kp N4  &kp N5  &kp N6  &kp MINUS  &out OUT_BLE

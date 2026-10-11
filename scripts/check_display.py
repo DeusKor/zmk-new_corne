@@ -7,7 +7,7 @@ s=(p/'widgets/peripheral_status.c').read_text()
 block=s[s.index('static void draw_top'):s.index('// LVGL callbacks')]
 assert hashlib.sha256(block.encode()).hexdigest() == "2163abdebc9188b094dc483d144b586146841f878f313613df44b4aba0bd95e4"
 build=(r/'build.yaml').read_text()
-assert 'shield: eyelash_corne_left nice_view\n' in build
+assert 'shield: eyelash_corne_left nice_view_focus\n' in build
 assert 'shield: eyelash_corne_right nice_view_baymax\n' in build
 assert 'lv_timer_pause(timer)' in s and 'k_uptime_get() - widget->last_press > 4000' in s
 assert 'ZMK_SUBSCRIPTION(widget_baymax_activity, zmk_position_state_changed)' in s
@@ -35,3 +35,10 @@ for body in re.findall(r'baymax_\w+_map\[\] = \{(.*?)\};', art, re.S):
                         seen.add((c,d));pending.append((c,d))
             assert count>3, 'Detached bright pixels outside the contour'
 print('PASS: all packed animation frames are free of detached 1-3 pixel slivers')
+
+focus=(r/'boards/shields/nice_view_focus/widgets/status.c').read_text()
+assert 'zmk_wpm' not in focus and 'circle_offsets' not in focus
+assert 'state->active_profile_index + 1' in focus
+assert all(k in focus for k in ['"LINKED"','"OFFLINE"','"NEW"','"USB"'])
+assert 'display-name = "BT"' in (r/'config/eyelash_corne.keymap').read_text()
+print('PASS: compact selected-slot status, no WPM graph, BT layer name')

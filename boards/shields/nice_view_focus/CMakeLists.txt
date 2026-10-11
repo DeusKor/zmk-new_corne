@@ -1,0 +1,7 @@
+if(CONFIG_ZMK_DISPLAY AND CONFIG_NICE_VIEW_WIDGET_STATUS)
+  if(NOT CONFIG_ZMK_SPLIT_ROLE_CENTRAL)
+    message(FATAL_ERROR "nice_view_focus is for the central/left half only")
+  endif()
+  zephyr_library_include_directories(${CMAKE_SOURCE_DIR}/include)
+  zephyr_library_sources(custom_status_screen.c widgets/status.c widgets/util.c widgets/bolt.c)
+endif()
