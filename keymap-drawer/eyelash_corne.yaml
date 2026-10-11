@@ -13,7 +13,7 @@ layers:
   - I
   - O
   - P
-  - NUM
+  - BT
   - $$mdi:keyboard-tab$$
   - A
   - S
@@ -62,7 +62,7 @@ layers:
   - {t: '8', s: '*'}
   - {t: '9', s: (}
   - '*'
-  - NUM
+  - BT
   - $$mdi:keyboard-tab$$
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
@@ -111,7 +111,7 @@ layers:
   - '*'
   - (
   - )
-  - NUM
+  - BT
   - $$mdi:keyboard-tab$$
   - {t: '`', s: '~'}
   - '~'
@@ -147,7 +147,7 @@ layers:
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:backspace$$', type: backspace}
   - EXT
-  NUM:
+  BT:
   - $$mdi:keyboard-esc$$
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
