@@ -82,9 +82,9 @@
         ext_layer {
             display-name = "EXT";
             bindings = <
-                &kp ESC  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &mmv MOVE_UP  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &mo NUM
-                &kp TAB  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp DEL  &mmv MOVE_LEFT  &mkp RCLK  &mmv MOVE_RIGHT  &kp H  &kp J  &kp K  &kp L  &kp SEMI  &kp SQT
-                &kp LSHFT  &kp F11  &kp F12  &kp C  &kp V  &kp B  &mo SYM  &mmv MOVE_DOWN  &kp N  &kp M  &kp COMMA  &kp DOT  &kp DEL  &to GAME
+                &kp ESC  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &mmv MOVE_UP  &kp FSLH  &kp N7  &kp N8  &kp N9  &kp ASTRK  &mo NUM
+                &kp TAB  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp DEL  &mmv MOVE_LEFT  &mkp RCLK  &mmv MOVE_RIGHT  &kp PLUS  &kp N4  &kp N5  &kp N6  &kp MINUS  &kp SQT
+                &kp LSHFT  &kp F11  &kp F12  &kp C  &kp V  &kp B  &mo SYM  &mmv MOVE_DOWN  &kp N0  &kp N1  &kp N2  &kp N3  &kp DOT  &to GAME
                 &kp LCTRL  &kp LALT  &kp LGUI  &kp SPACE  &kp BSPC  &trans
             >;
             sensor-bindings = <&rsr_vol &rsr_trans>;

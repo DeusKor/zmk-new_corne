@@ -51,7 +51,8 @@ assert bindings['num'][36] == '&kp N0'
 assert bindings['num'][40] == '&kp DOT'
 print('PASS: ASDF arrows and shifted UIO/JKL/M-comma-period numpad')
 
-assert [bindings['ext'][i] for i in [22,23,24,25,26,27]] == ['&kp '+k for k in ['H','J','K','L','SEMI','SQT']]
+for i in [7,8,9,10,11,22,23,24,25,26,36,37,38,39,40]:
+    assert bindings['ext'][i] == bindings['num'][i]
 assert [bindings['num'][i] for i in [14,15,16,17]] == ['&kp '+k for k in ['A','S','D','F']]
 assert '&out OUT_USB' in bindings['num'] and '&out OUT_BLE' in bindings['num']
 print('PASS: restored home-row letters and output selection')
