@@ -30,10 +30,10 @@ for body in re.findall(r'baymax_\w+_map\[\] = \{(.*?)\};', art, re.S):
             pending=[(x,y)];seen.add((x,y));count=0
             while pending:
                 a,b=pending.pop();count+=1
-                for c,d in ((a-1,b),(a+1,b),(a,b-1),(a,b+1)):
+                for c,d in tuple((a+dx,b+dy) for dx in (-1,0,1) for dy in (-1,0,1) if dx or dy):
                     if 0<=c<140 and 0<=d<68 and pixels[d][c] and (c,d) not in seen:
                         seen.add((c,d));pending.append((c,d))
-            assert count>3, 'Detached bright pixels outside the contour'
+            assert count>3, 'Detached dark pixels outside the outline'
 print('PASS: all packed animation frames are free of detached 1-3 pixel slivers')
 
 focus=(r/'boards/shields/nice_view_focus/widgets/status.c').read_text()
@@ -53,3 +53,8 @@ print('PASS: 100 unique startup quotes fit the 68x68 small-font region')
 
 for shield in ("nice_view_focus", "nice_view_baymax"):
     assert "CONFIG_NICE_VIEW_WIDGET_INVERTED=y" in (r / "boards/shields" / shield / f"{shield}.conf").read_text()
+
+# Outline interiors must remain unfilled in the actual packed image.
+for body in re.findall(r"baymax_\w+_map\[\] = \{(.*?)\};", art, re.S):
+    data=list(map(int,re.findall(r"\d+",body)))[8:]
+    assert sum(byte.bit_count() for byte in data) < 1000

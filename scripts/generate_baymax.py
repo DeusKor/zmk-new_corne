@@ -5,9 +5,10 @@ ROOT = Path(__file__).resolve().parents[1]
 W, H = 68, 140
 
 def frame(blink=False, wave=False):
-    # Intended physical appearance: white body on black. The encoded palette below
-    # compensates for the inversion observed on the actual right display.
+    # Intended physical appearance: dark outline/details on a white background.
+    # The encoded palette compensates for the observed physical panel inversion.
     pixels = [[0] * W for _ in range(H)]
+    silhouette = [[0] * W for _ in range(H)]
     def ellipse(cx, cy, rx, ry, color):
         for y in range(H):
             for x in range(W):
@@ -22,7 +23,9 @@ def frame(blink=False, wave=False):
             intersections.sort()
             for left,right in zip(intersections[::2],intersections[1::2]):
                 for x in range(W):
-                    if left <= x+.5 < right:pixels[y][x]=color
+                    if left <= x+.5 < right:
+                        pixels[y][x]=color
+                        if color:silhouette[y][x]=1
     def path(start, curves, color):
         points=[start];a=start
         for b,c,d in curves:
@@ -96,21 +99,16 @@ def frame(blink=False, wave=False):
         ref_ellipse(263,397,13,13,0);ref_ellipse(357,397,13,13,0)
     ref_ellipse(363,510,19,19,0);ref_ellipse(363,510,13,13,1)
     line([(345,510),(381,510)],0,1)
-    # Detail strokes can cut tiny detached slivers off the filled contour.
-    # Remove only 1-3 pixel islands; preserve the head, feet and badge interiors.
-    seen=set()
+    # Keep the union contour and internal detail strokes; leave the body unfilled.
+    outlined = [[0] * W for _ in range(H)]
     for y in range(H):
         for x in range(W):
-            if not pixels[y][x] or (x,y) in seen:continue
-            pending=[(x,y)];seen.add((x,y));island=[]
-            while pending:
-                a,b=pending.pop();island.append((a,b))
-                for c,d in ((a-1,b),(a+1,b),(a,b-1),(a,b+1)):
-                    if 0<=c<W and 0<=d<H and pixels[d][c] and (c,d) not in seen:
-                        seen.add((c,d));pending.append((c,d))
-            if len(island)<=3:
-                for a,b in island:pixels[b][a]=0
-    return pixels
+            if not silhouette[y][x]:continue
+            boundary = any(not (0 <= x+dx < W and 0 <= y+dy < H) or
+                           not silhouette[y+dy][x+dx]
+                           for dx,dy in ((-1,0),(1,0),(0,-1),(0,1)))
+            outlined[y][x] = int(boundary or not pixels[y][x])
+    return outlined
 
 frames=[frame(),frame(blink=True),frame(wave=True)]
 # LVGL native panel is landscape; rotate artwork clockwise, like the status canvas.
