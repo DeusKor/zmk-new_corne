@@ -1,4 +1,5 @@
 /* Short original work reminders; selected once per firmware startup. */
+/* Wrapped to <=62px using Montserrat 10 glyph advances, with kerning margin. */
 #pragma once
 static const char *const focus_quotes[] = {
     "This day\nhappens\nonce.",
@@ -15,7 +16,7 @@ static const char *const focus_quotes[] = {
     "Spend time\nwith care.",
     "Make your\ntime\nmatter.",
     "Be proud of\ntoday.",
-    "Choose your\nnext step.",
+    "Choose\nyour next\nstep.",
     "Bring your\nfull focus.",
     "Make this\nmoment\ncount.",
     "Put care\ninto today.",
@@ -43,7 +44,7 @@ static const char *const focus_quotes[] = {
     "Use this\nday well.",
     "Create\nsomething\nbetter.",
     "Move with\nintention.",
-    "Choose care\nover haste.",
+    "Choose\ncare over\nhaste.",
     "Make the\ndetails\ncount.",
     "Leave good\nwork\nbehind.",
     "Build what\nhelps\npeople.",
@@ -74,11 +75,11 @@ static const char *const focus_quotes[] = {
     "Make the\neffort\nvisible.",
     "Earn a day\nto\nremember.",
     "Aim for\nlasting\nvalue.",
-    "Work with a\nclear mind.",
+    "Work with\na clear\nmind.",
     "Keep your\npurpose\nclose.",
     "Leave\nthings\nclearer.",
     "Be fully\nhere today.",
-    "Put meaning\ninto work.",
+    "Put\nmeaning\ninto work.",
     "Choose the\nuseful\npath.",
     "Make good\nthings\nhappen.",
     "Build on\nwhat\nmatters.",
@@ -96,9 +97,9 @@ static const char *const focus_quotes[] = {
     "Give your\nideas a\nchance.",
     "Put the day\nto good\nuse.",
     "Make time\nfor the\nbest.",
-    "Create more\nthan noise.",
+    "Create\nmore than\nnoise.",
     "Keep your\nfocus\nsteady.",
     "Take pride\nin the\ncraft.",
     "Bring\npurpose to\ntoday.",
-    "This moment\nhappens\nonce.",
+    "This\nmoment\nhappens\nonce.",
 };
