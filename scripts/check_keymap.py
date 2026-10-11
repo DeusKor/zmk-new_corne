@@ -51,10 +51,10 @@ assert bindings['num'][36] == '&kp N0'
 assert bindings['num'][40] == '&kp DOT'
 print('PASS: ASDF arrows and shifted UIO/JKL/M-comma-period numpad')
 
-assert [bindings['ext'][i] for i in [23,24,25,26]] == ['&kp '+k for k in ['LSHFT','LGUI','LALT','LCTRL']]
-assert [bindings['num'][i] for i in [14,15,16,17]] == ['&kp '+k for k in ['LCTRL','LALT','LGUI','LSHFT']]
+assert [bindings['ext'][i] for i in [22,23,24,25,26,27]] == ['&kp '+k for k in ['H','J','K','L','SEMI','SQT']]
+assert [bindings['num'][i] for i in [14,15,16,17]] == ['&kp '+k for k in ['A','S','D','F']]
 assert '&out OUT_USB' in bindings['num'] and '&out OUT_BLE' in bindings['num']
-print('PASS: opposite-hand modifier rows and output selection')
+print('PASS: restored home-row letters and output selection')
 
 # Joystick identity comes from the editor's physical layout, not letter positions.
 import json
@@ -68,8 +68,8 @@ for layer, bs in bindings.items():
 assert 'CONFIG_ZMK_POINTING=y' in (p / 'config/eyelash_corne.conf').read_text()
 print('PASS: joystick directions, layer clicks and existing mouse support')
 
-# Cmd is a plain held key: BASE restores A after the EXT thumb is released.
-assert bindings['ext'][24] == '&kp LGUI'
+# Cmd is a plain thumb key; letters are restored after releasing EXT.
+assert bindings['ext'][44] == '&kp LGUI'
 assert bindings['base'][14] == '&kp A'
 assert bindings['base'][43] == '&kp LALT'
 assert bindings['base'][44] == '&kp LGUI'

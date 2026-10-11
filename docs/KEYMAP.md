@@ -12,11 +12,11 @@ US host layout; 48 positions, including six thumbs, a five-way switch and encode
 
 Typing Enter is the BASE comma+period combo; no dedicated Enter on typing layers. Hold the encoder-press key (34) for SYM; rotation still controls volume. Hold the top outer right key (12) for NUM. The outer left column is Esc/Tab/Shift, top to bottom, on every layer.
 
-EXT has A/S/D/F arrows and J/K/L/semicolon = Shift/Cmd/Option/Ctrl. No Home/End/Page keys. F1–F12 remain. Left-thumb Option plus right-thumb Backspace works directly on BASE. For Option+arrows, hold right-thumb EXT, left-thumb Option, then use A/S/D/F. Cmd+A/C/V/Z can use left inner-thumb Cmd directly. Alternatively, hold EXT, hold K (Cmd), release EXT, then press the letter and release K; the fork routes releases to the original press layer. Physical event testing remains pending.
+EXT has A/S/D/F arrows; the right home row remains H/J/K/L/semicolon/quote. Modifiers are on the left thumbs and Shift is on the bottom-left key. No Home/End/Page keys. F1–F12 remain. Left-thumb Option plus right-thumb Backspace works directly on BASE. For Option+arrows, hold right-thumb EXT, left-thumb Option, then use A/S/D/F. Cmd+A/C/V/Z can use left inner-thumb Cmd directly. If EXT is already held, keep left-thumb Cmd down, release EXT, then press the BASE letter; the fork routes releases to the original press layer. Physical event testing remains pending.
 
 BASE combos: W+E Escape; I+O Backspace; X+C Tab; comma+period Enter. Press within 40 ms after 150 ms without typing. Combos are BASE-only. For Enter after using SYM/NUM/EXT, release that layer first. Left-thumb Option remains usable with the right-hand Backspace combo on BASE.
 
-NUM: U/I/O = 7/8/9, J/K/L = 4/5/6, M/comma/period = 1/2/3; N = 0, slash = decimal. A/S/D/F = Ctrl/Alt/Cmd/Shift. NUM+G selects USB, NUM+quote Bluetooth; X/C/V/B select Bluetooth profiles 0–3. NUM+Z unlocks Studio. NUM+bottom outer right held for two seconds soft-powers off; hardware reset wakes it. No pairing-clear keys.
+NUM: U/I/O = 7/8/9, J/K/L = 4/5/6, M/comma/period = 1/2/3; N = 0, slash = decimal. Left A/S/D/F remain letters; use thumb modifiers for modified numbers. NUM+G selects USB, NUM+quote Bluetooth; X/C/V/B select Bluetooth profiles 0–3. NUM+Z unlocks Studio. NUM+bottom outer right held for two seconds soft-powers off; hardware reset wakes it. No pairing-clear keys.
 
 GAME remains separately optimized: plain movement/ability keys and dedicated modifiers, left-thumb number access, right-thumb Backspace and dedicated Enter. Its outer left column is Esc/Tab/Shift; Ctrl is at right semicolon. GAME NUM places 1–5 on Q–T and 6–0 on A–G. Bottom outer right exits to BASE. Release held keys before switching. No gaming combos or hold-taps.
 
@@ -40,20 +40,20 @@ Joystick directions move the mouse on every layer. Centre left-clicks, EXT centr
 | 11 | P | F10 | RPAR | ASTRK | N5 | N5 |
 | 12 | mo NUM | mo NUM | mo NUM | trans | N6 | N6 |
 | 13 | TAB | TAB | TAB | TAB | TAB | TAB |
-| 14 | A | LEFT | GRAVE | LCTRL | A | N6 |
-| 15 | S | DOWN | TILDE | LALT | S | N7 |
-| 16 | D | UP | LBKT | LGUI | D | N8 |
-| 17 | F | RIGHT | RBKT | LSHFT | F | N9 |
+| 14 | A | LEFT | GRAVE | A | A | N6 |
+| 15 | S | DOWN | TILDE | S | S | N7 |
+| 16 | D | UP | LBKT | D | D | N8 |
+| 17 | F | RIGHT | RBKT | F | F | N9 |
 | 18 | G | DEL | BSLH | out OUT_USB | G | N0 |
 | 19 | mmv MOVE_LEFT | mmv MOVE_LEFT | mmv MOVE_LEFT | mmv MOVE_LEFT | mmv MOVE_LEFT | mmv MOVE_LEFT |
 | 20 | mkp LCLK | mkp RCLK | mkp MCLK | mkp LCLK | mkp LCLK | mkp LCLK |
 | 21 | mmv MOVE_RIGHT | mmv MOVE_RIGHT | mmv MOVE_RIGHT | mmv MOVE_RIGHT | mmv MOVE_RIGHT | mmv MOVE_RIGHT |
-| 22 | H | ESC | MINUS | PLUS | N7 | N7 |
-| 23 | J | LSHFT | EQUAL | N4 | N8 | N8 |
-| 24 | K | LGUI | LBRC | N5 | N9 | N9 |
-| 25 | L | LALT | RBRC | N6 | N0 | N0 |
-| 26 | SEMI | LCTRL | PIPE | MINUS | LCTRL | LCTRL |
-| 27 | SQT | INS | DQT | out OUT_BLE | SQT | SQT |
+| 22 | H | H | MINUS | PLUS | N7 | N7 |
+| 23 | J | J | EQUAL | N4 | N8 | N8 |
+| 24 | K | K | LBRC | N5 | N9 | N9 |
+| 25 | L | L | RBRC | N6 | N0 | N0 |
+| 26 | SEMI | SEMI | PIPE | MINUS | LCTRL | LCTRL |
+| 27 | SQT | SQT | DQT | out OUT_BLE | SQT | SQT |
 | 28 | LSHFT | LSHFT | LSHFT | LSHFT | LSHFT | LSHFT |
 | 29 | Z | F11 | LT | studio_unlock | Z | Z |
 | 30 | X | F12 | GT | bt BT_SEL 0 | X | X |
