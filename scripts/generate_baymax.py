@@ -5,7 +5,8 @@ ROOT = Path(__file__).resolve().parents[1]
 W, H = 68, 140
 
 def frame(blink=False, wave=False):
-    # Fixed black background / white body, independent of status-widget inversion.
+    # Intended physical appearance: white body on black. The encoded palette below
+    # compensates for the inversion observed on the actual right display.
     pixels = [[0] * W for _ in range(H)]
     def ellipse(cx, cy, rx, ry, color):
         for y in range(H):
@@ -62,12 +63,12 @@ def frame(blink=False, wave=False):
                         ((183,684),(190,670),(193,651)),((199,589),(211,536),(225,507)),
                         ((232,480),(241,459),(247,448))],1)
     if wave:
-        path((373,448), [((397,458),(415,482),(422,508)),
-                            ((433,524),(443,517),(449,502)),((452,485),(451,469),(456,460)),
-                            ((455,450),(460,445),(465,453)),((468,439),(476,440),(477,452)),
-                            ((484,443),(489,451),(485,459)),((494,458),(497,466),(491,473)),
-                            ((491,490),(488,528),(475,546)),((463,562),(433,579),(421,567)),
-                            ((401,553),(396,521),(390,509)),((383,478),(377,459),(373,448))],1)
+        # Restore the earlier compact, rounded raised arm in native coordinates.
+        raster_path((47,54), [((52,56),(52,67),(54,72)),((61,77),(66,65),(64,55)),
+                              ((64,51),(65,47),(64,44)),((63,41),(62,41),(61,44)),
+                              ((60,39),(58,39),(58,43)),((56,40),(54,40),(55,46)),
+                              ((52,43),(51,45),(54,50)),((54,57),(50,60),(47,54))],1)
+        raster_line([(55,51),(58,54),(61,51)],0,1)
     else:
         path((377,448), [((413,458),(451,512),(468,567)),
                             ((479,594),(480,636),(478,661)),((477,675),(468,686),(455,684)),
@@ -107,14 +108,14 @@ for name, pixels in zip(('rest','blink','wave'), frames):
         for x in range(0,H,8):
             data.append(sum((row[x+i] if x+i < H else 0) << (7-i) for i in range(8)))
     lines += [f'static const uint8_t baymax_{name}_map[] = {{',
-              '0,0,0,255, 255,255,255,255,']
+              '255,255,255,255, 0,0,0,255,']
     lines += [','.join(map(str,data[i:i+18]))+',' for i in range(0,len(data),18)]
     lines += ['};',f'const lv_img_dsc_t baymax_{name} = {{',
               '.header.cf=LV_IMG_CF_INDEXED_1BIT, .header.always_zero=0,',
               f'.header.w={H}, .header.h={W}, .data_size=sizeof(baymax_{name}_map),',
               f'.data=baymax_{name}_map', '};']
 (ROOT/'boards/shields/nice_view_baymax/widgets/baymax.c').write_text('\n'.join(lines)+'\n')
-# Enlarged exact-pixel preview of all three portrait frames.
+# Enlarged exact-pixel geometry preview in intended physical display colours.
 scale=4; width=W*3*scale; height=H*scale
 raw=bytearray()
 for y in range(height):

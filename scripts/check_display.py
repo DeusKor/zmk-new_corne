@@ -15,5 +15,5 @@ art=(p/'widgets/baymax.c').read_text()
 assert art.count('.header.w=140, .header.h=68') == 3
 assert 'LV_IMG_CF_INDEXED_1BIT' in art
 assert 'CONFIG_NICE_VIEW_WIDGET_INVERTED' not in art
-assert art.count('0,0,0,255, 255,255,255,255,') == 3
+assert art.count('255,255,255,255, 0,0,0,255,') == 3
 print('PASS: unchanged battery/connection drawing, right-only shield, bounded one-bit art and idle pause')

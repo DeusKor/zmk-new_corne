@@ -18,11 +18,13 @@ Regenerate the three 140x68 one-bit LVGL images with
 The upstream image bounds are preserved. Test orientation, preserved status icons,
 activity and idle pause on hardware after an approved flash; battery impact is unmeasured.
 
-Baymax uses a fixed black background and solid white body with black details.
+Baymax is intended to appear as a solid white body with black details on black.
+Its encoded palette is reversed to compensate for the inversion the owner
+observed on the physical right display. Only the artwork palette changes.
 The artwork palette deliberately does not follow status-widget inversion; existing
-status icons still use their original theme. The native-pixel preview is generated
-from the same pixel data embedded in the firmware.
+status icons still use their original theme. The native-pixel preview shows the same geometry embedded in the firmware,
+in the intended physical display colours.
 
 The revised contour is traced from the approved concept coordinates and uniformly
 scaled (reference bounds 334x469). Head overlaps shoulders; the original broad
-belly and short feet proportions are retained, subject to the 68-pixel grid.
+belly and short feet proportions are retained, subject to the 68-pixel grid. The wave uses the earlier compact rounded arm.
