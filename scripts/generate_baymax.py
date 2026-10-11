@@ -5,32 +5,71 @@ ROOT = Path(__file__).resolve().parents[1]
 W, H = 68, 140
 
 def frame(blink=False, wave=False):
-    pixels = [[1] * W for _ in range(H)]
+    # Fixed black background / white body, independent of status-widget inversion.
+    pixels = [[0] * W for _ in range(H)]
     def ellipse(cx, cy, rx, ry, color):
-        for y in range(max(0, cy-ry), min(H, cy+ry+1)):
-            for x in range(max(0, cx-rx), min(W, cx+rx+1)):
-                if ((x-cx)/rx)**2 + ((y-cy)/ry)**2 <= 1:
+        for y in range(H):
+            for x in range(W):
+                if ((x+.5-cx)/rx)**2 + ((y+.5-cy)/ry)**2 <= 1:
                     pixels[y][x] = color
-    def outlined(cx, cy, rx, ry):
-        ellipse(cx, cy, rx, ry, 0)
-        ellipse(cx, cy, rx-2, ry-2, 1)
-    # Feet, arms, round body, head. Status area remains outside this bitmap.
-    outlined(25, 115, 8, 12); outlined(43, 115, 8, 12)
-    outlined(12, 78, 7, 27)
+    def polygon(points, color):
+        for y in range(H):
+            intersections=[]
+            for a,b in zip(points, points[1:]+points[:1]):
+                if min(a[1],b[1]) <= y+.5 < max(a[1],b[1]):
+                    intersections.append(a[0]+(y+.5-a[1])*(b[0]-a[0])/(b[1]-a[1]))
+            intersections.sort()
+            for left,right in zip(intersections[::2],intersections[1::2]):
+                for x in range(W):
+                    if left <= x+.5 < right:pixels[y][x]=color
+    def path(start, curves, color):
+        points=[start];a=start
+        for b,c,d in curves:
+            for i in range(1,25):
+                t=i/24;u=1-t
+                points.append((u**3*a[0]+3*u*u*t*b[0]+3*u*t*t*c[0]+t**3*d[0],
+                               u**3*a[1]+3*u*u*t*b[1]+3*u*t*t*c[1]+t**3*d[1]))
+            a=d
+        polygon(points,color)
+    def line(points, color=0, width=1):
+        for a,b in zip(points,points[1:]):
+            steps=int(max(abs(b[0]-a[0]),abs(b[1]-a[1]))*3)+1
+            for i in range(steps+1):
+                t=i/steps;ellipse(a[0]+.5+t*(b[0]-a[0]),a[1]+.5+t*(b[1]-a[1]),width/2,width/2,color)
+    # Short rounded feet, broad pear-shaped belly, gently tapered hanging arms.
+    path((17,100), [((16,113),(20,120),(29,120)),((33,120),(33,108),(33,103))],1)
+    path((35,103), [((35,108),(35,120),(39,120)),((48,120),(52,113),(51,100))],1)
+    path((23,53), [((13,56),(7,69),(6,82)),((5,91),(5,100),(10,101)),
+                       ((14,101),(15,94),(16,84)),((18,71),(20,60),(23,53))],1)
     if wave:
-        outlined(57, 55, 7, 21)
-        outlined(58, 36, 6, 8)
+        path((47,54), [((52,56),(52,67),(54,72)),((61,77),(66,65),(64,55)),
+                           ((64,51),(65,47),(64,44)),((63,41),(62,41),(61,44)),
+                           ((60,39),(58,39),(58,43)),((56,40),(54,40),(55,46)),
+                           ((52,43),(51,45),(54,50)),((54,57),(50,60),(47,54))],1)
+        line([(55,51),(58,54),(61,51)],0,1)
     else:
-        outlined(56, 78, 7, 27)
-    outlined(34, 83, 23, 34)
-    outlined(34, 35, 20, 14)
-    for x in range(25, 44): pixels[35][x] = 0
+        path((45,53), [((55,56),(61,69),(62,82)),((63,91),(63,100),(58,101)),
+                           ((54,101),(53,94),(52,84)),((50,71),(48,60),(45,53))],1)
+    path((25,52), [((18,54),(15,64),(13,81)),((11,97),(15,106),(27,109)),
+                       ((31,110),(37,110),(41,109)),((53,106),(57,97),(55,81)),
+                       ((53,64),(50,54),(43,52)),((39,49),(29,49),(25,52))],1)
+    # Thin internal seams retain definition without hollowing out the white body.
+    line([(18,65),(16,77),(14,93)],0,1)
+    line([(50,65),(52,77),(54,93)],0,1)
+    line([(17,102),(22,107),(28,110),(34,111),(40,110),(46,107),(51,102)],0,1)
+    # Broad oval head with flatter top/bottom, matching the approved preview.
+    path((25,27), [((17,28),(15,33),(15,39)),((15,46),(23,50),(34,50)),
+                       ((45,50),(53,46),(53,39)),((53,33),(51,28),(43,27)),
+                       ((38,26),(30,26),(25,27))],1)
+    line([(23,48),(28,50),(40,50),(45,48)],0,1)
+    line([(25,39),(43,39)],0,1)
     if blink:
-        for y in (34,35):
+        for y in (39,40):
             for x in list(range(22,29))+list(range(40,47)):pixels[y][x]=0
     else:
-        ellipse(25,35,3,3,0); ellipse(43,35,3,3,0)
-    outlined(44,62,3,3)
+        ellipse(25,39,2.5,2.5,0);ellipse(43,39,2.5,2.5,0)
+    ellipse(43,61,3.5,3.5,0);ellipse(43,61,2.5,2.5,1)
+    line([(40,61),(46,61)],0,1)
     return pixels
 
 frames=[frame(),frame(blink=True),frame(wave=True)]
@@ -41,11 +80,9 @@ for name, pixels in zip(('rest','blink','wave'), frames):
     for y in range(W):
         row=[pixels[H-1-x][y] for x in range(H)]
         for x in range(0,H,8):
-            data.append(sum((row[x+i] if x+i < H else 1) << (7-i) for i in range(8)))
+            data.append(sum((row[x+i] if x+i < H else 0) << (7-i) for i in range(8)))
     lines += [f'static const uint8_t baymax_{name}_map[] = {{',
-              '#if CONFIG_NICE_VIEW_WIDGET_INVERTED',
-              '255,255,255,255, 0,0,0,255,', '#else',
-              '0,0,0,255, 255,255,255,255,', '#endif']
+              '0,0,0,255, 255,255,255,255,']
     lines += [','.join(map(str,data[i:i+18]))+',' for i in range(0,len(data),18)]
     lines += ['};',f'const lv_img_dsc_t baymax_{name} = {{',
               '.header.cf=LV_IMG_CF_INDEXED_1BIT, .header.always_zero=0,',

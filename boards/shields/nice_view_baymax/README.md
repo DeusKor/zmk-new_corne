@@ -17,3 +17,8 @@ Regenerate the three 140x68 one-bit LVGL images with
 `docs/baymax-preview.png`; firmware rotates it to match the original art orientation.
 The upstream image bounds are preserved. Test orientation, preserved status icons,
 activity and idle pause on hardware after an approved flash; battery impact is unmeasured.
+
+Baymax uses a fixed black background and solid white body with black details.
+The artwork palette deliberately does not follow status-widget inversion; existing
+status icons still use their original theme. The native-pixel preview is generated
+from the same pixel data embedded in the firmware.
