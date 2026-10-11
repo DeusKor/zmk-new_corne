@@ -22,3 +22,7 @@ Baymax uses a fixed black background and solid white body with black details.
 The artwork palette deliberately does not follow status-widget inversion; existing
 status icons still use their original theme. The native-pixel preview is generated
 from the same pixel data embedded in the firmware.
+
+The revised contour is traced from the approved concept coordinates and uniformly
+scaled (reference bounds 334x469). Head overlaps shoulders; the original broad
+belly and short feet proportions are retained, subject to the 68-pixel grid.
