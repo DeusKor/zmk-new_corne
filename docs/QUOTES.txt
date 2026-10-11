@@ -1,0 +1,175 @@
+One-screen quotes from the owner-supplied Forbes collection.
+Shortened entries are adaptations, not verbatim quotations.
+Attributions are preserved as supplied, not independently verified.
+Longer entries are omitted. One selection stays until the next startup.
+
+Source #1: Life is about making an impact, not making an income. --Kevin Kruse
+Display (adapted): Make an impact, not just an income.
+
+Source #3: Strive not to be a success, but rather to be of value. -Albert Einstein
+Display (adapted): Seek value, not just success.
+
+Source #5: I attribute my success to this: I never gave or took any excuse. -Florence Nightingale
+Display (adapted): Take responsibility. Make no excuses.
+
+Source #6: You miss 100% of the shots you don't take. -Wayne Gretzky
+Display (adapted): You miss every shot you don't take.
+
+Source #8: The most difficult thing is the decision to act, the rest is merely tenacity. -Amelia Earhart
+Display (adapted): Decide to act. Then persist.
+
+Source #9: Every strike brings me closer to the next home run. -Babe Ruth
+Display (adapted): Each strike brings a home run closer.
+
+Source #10: Definiteness of purpose is the starting point of all achievement. -W. Clement Stone
+Display (adapted): Achievement begins with purpose.
+
+Source #11: Life isn't about getting and having, it's about giving and being. -Kevin Kruse
+Display (adapted): Life is about giving and being.
+
+Source #12: Life is what happens to you while you're busy making other plans. -John Lennon
+Display (adapted): Life happens while we make plans.
+
+Source #13: We become what we think about. -Earl Nightingale
+Display (verbatim): We become what we think about.
+
+Source #15: Life is 10% what happens to me and 90% of how I react to it. -Charles Swindoll
+Display (adapted): Your response matters most.
+
+Source #16: The most common way people give up their power is by thinking they don't have any. -Alice Walker
+Display (adapted): Don't give away your own power.
+
+Source #17: The mind is everything. What you think you become. -Buddha
+Display (verbatim): The mind is everything. What you think you become.
+
+Source #18: The best time to plant a tree was 20 years ago. The second best time is now. -Chinese Proverb
+Display (adapted): The next best time to plant is now.
+
+Source #19: An unexamined life is not worth living. -Socrates
+Display (verbatim): An unexamined life is not worth living.
+
+Source #20: Eighty percent of success is showing up. -Woody Allen
+Display (verbatim): Eighty percent of success is showing up.
+
+Source #21: Your time is limited, so don't waste it living someone else's life. -Steve Jobs
+Display (adapted): Live your own life. Time is limited.
+
+Source #23: I am not a product of my circumstances. I am a product of my decisions. -Stephen Covey
+Display (adapted): Let decisions shape your life.
+
+Source #27: Either you run the day, or the day runs you. -Jim Rohn
+Display (adapted): Run the day. Don't let it run you.
+
+Source #31: The best revenge is massive success. -Frank Sinatra
+Display (verbatim): The best revenge is massive success.
+
+Source #32: People often say that motivation doesn't last. Well, neither does bathing. That's why we recommend it daily. -Zig Ziglar
+Display (adapted): Renew your motivation each day.
+
+Source #33: Life shrinks or expands in proportion to one's courage. -Anais Nin
+Display (adapted): Courage expands your life.
+
+Source #34: If you hear a voice within you say "you cannot paint," then by all means paint and that voice will be silenced. -Vincent Van Gogh
+Display (adapted): Doubt you can paint? Paint anyway.
+
+Source #38: Go confidently in the direction of your dreams. Live the life you have imagined. -Henry David Thoreau
+Display (adapted): Live the life you've imagined.
+
+Source #41: Certain things catch your eye, but pursue only those that capture the heart. - Ancient Indian Proverb
+Display (adapted): Pursue what captures your heart.
+
+Source #42: Believe you can and you're halfway there. -Theodore Roosevelt
+Display (adapted): Belief is half the journey.
+
+Source #43: Everything you've ever wanted is on the other side of fear. -George Addair
+Display (adapted): What you want lies beyond fear.
+
+Source #46: Start where you are. Use what you have. Do what you can. -Arthur Ashe
+Display (adapted): Start here. Use what you have.
+
+Source #48: Fall seven times and stand up eight. -Japanese Proverb
+Display (adapted): Fall seven times. Rise eight.
+
+Source #50: Everything has beauty, but not everyone can see. -Confucius
+Display (verbatim): Everything has beauty, but not everyone can see.
+
+Source #51: How wonderful it is that nobody need wait a single moment before starting to improve the world. -Anne Frank
+Display (adapted): You can start improving things now.
+
+Source #54: Happiness is not something readymade. It comes from your own actions. -Dalai Lama
+Display (adapted): Happiness grows from your actions.
+
+Source #57: If the wind will not serve, take to the oars. -Latin Proverb
+Display (adapted): No wind? Take to the oars.
+
+Source #62: If you want to lift yourself up, lift up someone else. -Booker T. Washington
+Display (adapted): Lift others to lift yourself.
+
+Source #63: I have been impressed with the urgency of doing. Knowing is not enough; we must apply. Being willing is not enough; we must do. -Leonardo da Vinci
+Display (adapted): Knowing needs action. Apply it.
+
+Source #69: A person who never made a mistake never tried anything new. - Albert Einstein
+Display (adapted): Trying new things means mistakes.
+
+Source #71: There are no traffic jams along the extra mile. -Roger Staubach
+Display (adapted): The extra mile has no traffic jams.
+
+Source #72: It is never too late to be what you might have been. -George Eliot
+Display (adapted): It's not too late to become more.
+
+Source #73: You become what you believe. -Oprah Winfrey
+Display (verbatim): You become what you believe.
+
+Source #74: I would rather die of passion than of boredom. -Vincent van Gogh
+Display (verbatim): I would rather die of passion than of boredom.
+
+Source #78: Build your own dreams, or someone else will hire you to build theirs. -Farrah Gray
+Display (adapted): Build your dreams, or build theirs.
+
+Source #80: Education costs money. But then so does ignorance. -Sir Claus Moser
+Display (adapted): Ignorance has a cost, too.
+
+Source #81: I have learned over the years that when one's mind is made up, this diminishes fear. -Rosa Parks
+Display (adapted): A firm decision diminishes fear.
+
+Source #82: It does not matter how slowly you go as long as you do not stop. -Confucius
+Display (adapted): Go slowly if you must. Keep going.
+
+Source #85: You can't use up creativity. The more you use, the more you have. -Maya Angelou
+Display (adapted): Using creativity makes more of it.
+
+Source #86: Dream big and dare to fail. -Norman Vaughan
+Display (verbatim): Dream big and dare to fail.
+
+Source #88: Do what you can, where you are, with what you have. -Teddy Roosevelt
+Display (adapted): Do what you can with what you have.
+
+Source #89: If you do what you've always done, you'll get what you've always gotten. -Tony Robbins
+Display (adapted): New results need new actions.
+
+Source #90: Dreaming, after all, is a form of planning. -Gloria Steinem
+Display (verbatim): Dreaming, after all, is a form of planning.
+
+Source #92: You may be disappointed if you fail, but you are doomed if you don't try. -Beverly Sills
+Display (adapted): Failure may hurt. Not trying dooms.
+
+Source #94: Life is what we make it, always has been, always will be. -Grandma Moses
+Display (adapted): Life is what we make it.
+
+Source #96: When everything seems to be going against you, remember that the airplane takes off against the wind, not with it. -Henry Ford
+Display (adapted): Planes take off against the wind.
+
+Source #97: It's not the years in your life that count. It's the life in your years. -Abraham Lincoln
+Display (adapted): Put life into your years.
+
+Source #99: Either write something worth reading or do something worth writing. -Benjamin Franklin
+Display (adapted): Write well, or do worth writing.
+
+Source #100: Nothing is impossible, the word itself says, "I'm possible!" -Audrey Hepburn
+Display (adapted): Even 'impossible' says 'I'm possible'.
+
+Source #101: The only way to do great work is to love what you do. -Steve Jobs
+Display (adapted): Great work begins with loving it.
+
+Source #102: If you can dream it, you can achieve it. -Zig Ziglar
+Display (verbatim): If you can dream it, you can achieve it.
