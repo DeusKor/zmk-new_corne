@@ -74,7 +74,7 @@ static void draw_middle(lv_obj_t *widget, lv_color_t cbuf[], const struct status
     init_rect_dsc(&background, LVGL_BACKGROUND);
     lv_canvas_draw_rect(canvas, 0, 0, CANVAS_SIZE, CANVAS_SIZE, &background);
     lv_draw_label_dsc_t quote;
-    init_label_dsc(&quote, LVGL_FOREGROUND, &lv_font_unscii_8, LV_TEXT_ALIGN_CENTER);
+    init_label_dsc(&quote, LVGL_FOREGROUND, &lv_font_montserrat_10, LV_TEXT_ALIGN_CENTER);
     lv_canvas_draw_text(canvas, 0, 0, CANVAS_SIZE, &quote, startup_quote);
     rotate_canvas(canvas, cbuf);
 }

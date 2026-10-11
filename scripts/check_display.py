@@ -47,6 +47,6 @@ import json
 quotes=(r/'boards/shields/nice_view_focus/widgets/quotes.h').read_text()
 messages=[json.loads(line.strip().rstrip(',')) for line in quotes.splitlines() if line.strip().startswith('"')]
 assert len(messages)==100 and len(set(messages))==100
-assert all(len(q.splitlines())<=8 and all(len(line)<=8 for line in q.splitlines()) for q in messages)
+assert all(len(q.splitlines())<=5 and all(len(line)<=11 for line in q.splitlines()) for q in messages)
 assert 'sys_rand32_get() % ARRAY_SIZE(focus_quotes)' in focus
-print('PASS: 100 unique startup quotes fit the 68x68 monospace region')
+print('PASS: 100 unique startup quotes fit the 68x68 small-font region')
