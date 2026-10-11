@@ -10,7 +10,7 @@ US host layout; 48 positions, including six thumbs, a five-way switch and encode
 | Middle | Option (43) | Backspace (46) |
 | Outer | Ctrl (42) | Hold EXT (47) |
 
-Typing Enter is the BASE comma+period combo; no dedicated Enter on typing layers. Hold the encoder-press key (34) for SYM; rotation still controls volume. Hold the top outer right key (12) for NUM. The outer left column is Esc/Tab/Shift, top to bottom, on every layer.
+Typing Enter is the BASE comma+period combo; no dedicated Enter on typing layers. Hold the bottom-right outer finger key (41) from BASE for SYM (the third typing layer). Encoder press is unused on typing layers; rotation still controls volume. Hold the top outer right key (12) for NUM. The outer left column is Esc/Tab/Shift, top to bottom, on every layer.
 
 EXT combines A/S/D/F arrows on the left with the right-hand numpad: U/I/O = 7/8/9, J/K/L = 4/5/6, M/comma/period = 1/2/3, N = 0 and slash = decimal. Division, multiplication, plus and minus surround the grid. Modifiers are on the left thumbs and Shift is on the bottom-left key. No Home/End/Page keys. F1–F5 and F11–F12 remain on the left. Left-thumb Option plus right-thumb Backspace works directly on BASE. For Option+arrows, hold right-thumb EXT, left-thumb Option, then use A/S/D/F. Cmd+A/C/V/Z can use left inner-thumb Cmd directly. If EXT is already held, keep left-thumb Cmd down, release EXT, then press the BASE letter; the fork routes releases to the original press layer. Physical event testing remains pending.
 
@@ -60,14 +60,14 @@ Joystick directions move the mouse on every layer. Centre left-clicks, EXT centr
 | 31 | C | C | LPAR | bt BT_SEL 1 | C | C |
 | 32 | V | V | RPAR | bt BT_SEL 2 | V | V |
 | 33 | B | B | UNDER | bt BT_SEL 3 | B | B |
-| 34 | mo SYM | mo SYM | trans | mo SYM | SPACE | SPACE |
+| 34 | none | none | none | none | SPACE | SPACE |
 | 35 | mmv MOVE_DOWN | mmv MOVE_DOWN | mmv MOVE_DOWN | mmv MOVE_DOWN | mmv MOVE_DOWN | mmv MOVE_DOWN |
 | 36 | N | N0 | PLUS | N0 | N | N |
 | 37 | M | N1 | EQUAL | N1 | M | M |
 | 38 | COMMA | N2 | COMMA | N2 | COMMA | COMMA |
 | 39 | DOT | N3 | DOT | N3 | DOT | DOT |
 | 40 | FSLH | DOT | FSLH | DOT | FSLH | FSLH |
-| 41 | ESC | to GAME | ESC | soft_off | to BASE | to BASE |
+| 41 | mo SYM | to GAME | trans | soft_off | to BASE | to BASE |
 | 42 | LCTRL | LCTRL | LCTRL | LCTRL | LALT | LALT |
 | 43 | LALT | LALT | LALT | LALT | mo GAME_NUM | mo GAME_NUM |
 | 44 | LGUI | LGUI | LGUI | LGUI | SPACE | SPACE |
