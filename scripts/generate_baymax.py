@@ -96,6 +96,20 @@ def frame(blink=False, wave=False):
         ref_ellipse(263,397,13,13,0);ref_ellipse(357,397,13,13,0)
     ref_ellipse(363,510,19,19,0);ref_ellipse(363,510,13,13,1)
     line([(345,510),(381,510)],0,1)
+    # Detail strokes can cut tiny detached slivers off the filled contour.
+    # Remove only 1-3 pixel islands; preserve the head, feet and badge interiors.
+    seen=set()
+    for y in range(H):
+        for x in range(W):
+            if not pixels[y][x] or (x,y) in seen:continue
+            pending=[(x,y)];seen.add((x,y));island=[]
+            while pending:
+                a,b=pending.pop();island.append((a,b))
+                for c,d in ((a-1,b),(a+1,b),(a,b-1),(a,b+1)):
+                    if 0<=c<W and 0<=d<H and pixels[d][c] and (c,d) not in seen:
+                        seen.add((c,d));pending.append((c,d))
+            if len(island)<=3:
+                for a,b in island:pixels[b][a]=0
     return pixels
 
 frames=[frame(),frame(blink=True),frame(wave=True)]

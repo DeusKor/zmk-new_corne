@@ -17,3 +17,21 @@ assert 'LV_IMG_CF_INDEXED_1BIT' in art
 assert 'CONFIG_NICE_VIEW_WIDGET_INVERTED' not in art
 assert art.count('255,255,255,255, 0,0,0,255,') == 3
 print('PASS: unchanged battery/connection drawing, right-only shield, bounded one-bit art and idle pause')
+
+# Inspect the actual packed LVGL bitmaps independently of the generator.
+for body in re.findall(r'baymax_\w+_map\[\] = \{(.*?)\};', art, re.S):
+    data=list(map(int,re.findall(r'\d+',body)))[8:]
+    assert len(data)==18*68
+    pixels=[[bool(data[y*18+x//8] & (1 << (7-x%8))) for x in range(140)] for y in range(68)]
+    seen=set()
+    for y in range(68):
+        for x in range(140):
+            if not pixels[y][x] or (x,y) in seen:continue
+            pending=[(x,y)];seen.add((x,y));count=0
+            while pending:
+                a,b=pending.pop();count+=1
+                for c,d in ((a-1,b),(a+1,b),(a,b-1),(a,b+1)):
+                    if 0<=c<140 and 0<=d<68 and pixels[d][c] and (c,d) not in seen:
+                        seen.add((c,d));pending.append((c,d))
+            assert count>3, 'Detached bright pixels outside the contour'
+print('PASS: all packed animation frames are free of detached 1-3 pixel slivers')
